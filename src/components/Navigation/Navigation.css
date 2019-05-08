@@ -80,7 +80,7 @@ a, a:hover, a:focus {
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #ca10ca;
+    background: #e4ad41;
 }
 ul ul a {
     font-size: 0.9em !important;
@@ -118,8 +118,8 @@ ul ul a {
 .searchButton {
   width: 40px;
   height: 36px;
-  border: 1px solid #ffb503;
-  background: #ffb503;
+  border: 1px solid #e4ad41;
+  background: #e4ad41;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
@@ -132,6 +132,15 @@ ul ul a {
 }
 .btn-info {
     color: #fff;
-    background-color: #ffb503!important;
-    border-color: #ffb503!important;
+    background-color: #e4ad41!important;
+    border-color: #e4ad41!important;
+}
+.login-icon{
+
+color:white;
+cursor: pointer;
+} 
+.login-icon:hover {
+color:yellow;
+
 }

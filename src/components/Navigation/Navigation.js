@@ -45,8 +45,21 @@ render(){
                     <h3>Navigation</h3>
                 </div>
                 <ul className="components">
-                <li>AAA</li>
-                    <li>AAA</li>
+                    <li> <form class="form-inline my-2 my-lg-0">
+                    <div className="wrap-search">
+                        <div class="search-inside">
+                            <input
+                                type="text"
+                                class="searchTerm"
+                                placeholder="What are you looking for?"
+                            />
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        </div>
+                    </form></li>
+                    
                 </ul>
                 <ul class="list-unstyled components">
                     <p>Heading</p>
@@ -95,8 +108,8 @@ render(){
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid" >
                         <button type="button" id="sidebarCollapse" class="btn btn-info" onClick={this.closeNavbar}>
-                            <i class="fas fa-align-left"></i>
-                            <span>{this.state.isOpen?'X':'O'}</span>
+                            
+                            <span>{this.state.isOpen ? 'X' : <i class="fas fa-align-left"></i>}</span>
                         </button>
 
                     </div>

@@ -2,8 +2,8 @@ import React from 'react';
 
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navigation from "./components/Navigation";
-import MainContent from "./components/MainContent";
+import Navigation from "./components/Navigation/Navigation";
+import MainContent from "./components/Main/MainContent";
 
 function App() {
   return (

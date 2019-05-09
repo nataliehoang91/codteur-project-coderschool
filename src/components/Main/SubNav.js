@@ -6,7 +6,7 @@ class SubNav extends Component{
         return(
             <div className="border">
                 <div class=" d-flex justify-content-between py-2">
-                    <div class="logo col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ml-5">
                         <img class="img-responsive ml-5" src="/img/logo.png" alt="logo"></img>
                         <span class=" ml-3">TUTOR FINDER</span>
                         </div>

@@ -8,19 +8,16 @@ import Footer from "./components/Main/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="d-flex">
     <div className="d-inline-block">
       <Navigation/>
       </div>
-      <div className="d-inline-block">
+      <div className="d-inline-block w-100">
     
       <MainContent/>
       
       </div>
-      <div className="d-inline">
-
-        <Footer />
-      </div>
+      
     </div>
   );
 }

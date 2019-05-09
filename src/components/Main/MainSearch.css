@@ -1,0 +1,67 @@
+.bg-img{
+     background-image: url("./covers.jpeg");
+  background-size: cover;
+  background-position: center center;
+  
+  width: 100%;
+  height:560px;
+  opacity: 1;
+  visibility: inherit;
+  z-index: 20;
+}
+.countdown {
+    padding: 18px 15px!important;
+    border-radius: 5px!important;
+    margin-top: -80px!important;
+    margin-left: 100px !important;
+    position: absolute!important;
+    overflow: hidden!important;
+    width: 100%!important;
+    background-color:rgb(255, 255, 254);
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.countdown:before {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+  
+    background-size: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    content: "" !important;
+}
+.custom-select{
+  color: #dbd7d7!important;
+  background-color: #ffffff00!important;
+    border: 1px solid #ffb503!important;
+    border-radius: .25rem!important;
+}
+.top-space{
+  margin-top:100px!important;
+}
+.card{
+  height:100%;
+}
+.card-img-top{
+height:230px;
+}
+
+.box-count{
+  min-height: 100px !important;
+  
+  background-color: transparent!important;
+}
+.figure-number{
+  font-size:30px;
+}
+.bord-right{
+    border-right: 2px solid #ffb503!important;
+}
+.card{
+background-color: #faf6eff8 !important;
+    background-clip: border-box !important;
+    border: 1px solid #ffb503 !important;
+}

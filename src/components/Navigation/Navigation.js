@@ -51,7 +51,7 @@ render(){
     };
     
     return(
-        <div class="wrapper">
+        <div class="wrapper h-100">
          
     <nav id="sidebar">
                 <div class="sidebar-header">

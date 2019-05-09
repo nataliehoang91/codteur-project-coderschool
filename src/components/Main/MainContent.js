@@ -6,6 +6,8 @@ import SubNav from "./SubNav";
 import MainSearch from "./MainSearch";
 import TutorDisplay from "./TutorsDisplay";
 import ExtraInfo from "./ExtraInfo";
+import Steps from "./Steps"
+import Why from "./Why"
 
 class MainContent extends Component{
 render(){
@@ -16,6 +18,8 @@ render(){
       <MainSearch/>
       <TutorDisplay/>
       <ExtraInfo/>
+      <Steps/>
+      <Why/>
       <Footer/>
         </div>
     )

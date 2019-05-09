@@ -4,16 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class ExtraInfo extends Component{
     render(){
         return(
+            <div>
+            <h1>Courses</h1>
             <div class="card-group border test">
+         
                 <div class="card">
-                    <img class="card-img-top" src="http://files.softicons.com/download/system-icons/windows-8-metro-icons-by-dakirby309/png/512x512/Applications/HTML5.png" alt="Card image cap"/>
+                        <img class="card-img-top" src="https://cdn-images-1.medium.com/max/1600/1*Lk7YWiSeDYGd-ITVUXbBbA.png" alt="Card image cap"/>
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             
                         </div>
   </div>
                     <div class="card">
-                    <img class="card-img-top" src="https://vectors.pro/wp-content/uploads/2018/04/css3-logo-icon-vector.png" alt="Card image cap"/>
+                        <img class="card-img-top" src="https://www.shareicon.net/download/2015/09/11/99500_css3.svg" alt="Card image cap"/>
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                
@@ -42,7 +45,7 @@ class ExtraInfo extends Component{
                 </div>
                         </div>
 
-
+            </div>
         );
     }
 }

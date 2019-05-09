@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Steps.css"
+
 class Steps extends Component {
     render(){
         return(
-            <div>
-            <h1>Easy Steps</h1>
+            <div className="pt-4">
+                <div className="y-us-title text-center">
+                    <h2>Easy Steps</h2>
+
+                    <span class="y-us-title-border"></span>
+                </div>
                             <div class="row">
                     
                     <div class="col-sm-12 col-md-12 side-content">

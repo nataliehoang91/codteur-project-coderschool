@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./why.css";
+
 
 class Why extends Component {
     render() {
@@ -11,7 +11,7 @@ class Why extends Component {
                         <div class="y-us-head">
                             <div class="y-us-title">
                                 <h2>Why choose us</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                                
                                 <span class="y-us-title-border"></span>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ class Why extends Component {
                                             <span class=" fas fa-leaf icon"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h4>safety first</h4>
+                                            <h4>ECONOMY</h4>
                                             <p>Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior del</p>
                                         </div>
                                     </div>
@@ -38,7 +38,7 @@ class Why extends Component {
                                             <span class="fas fa-leaf icon"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h4>CLEAN SURFACE</h4>
+                                            <h4>CONVINENCE</h4>
                                             <p>Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior del</p>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@ class Why extends Component {
                                             <span class="fas fa-leaf icon"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h4>MODERN PAINTING</h4>
+                                            <h4>COMMINICATION</h4>
                                             <p>Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior del</p>
                                         </div>
                                     </div>

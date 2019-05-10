@@ -12,7 +12,7 @@ class Navigation extends Component{
 
         
         this.state = {
-            isOpen: true,
+            isOpen: false,
             isLogin:false,
             userName:''
         };
@@ -53,7 +53,9 @@ render(){
     return(
         <div class="wrapper h-100">
          
-    <nav id="sidebar">
+    <nav id="sidebar" style={{display: `${this.state.isOpen ? 'block' : 'none'}`}} >
+
+
                 <div class="sidebar-header">
                     <h3>Navigation</h3>
                     

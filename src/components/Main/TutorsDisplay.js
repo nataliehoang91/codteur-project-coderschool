@@ -8,7 +8,7 @@ class TutorDisplay extends Component {
     return (
         <div className="padding-title ">
             <div className="y-us-title text-center">
-                <h2>Tutors</h2>
+                <h2 className=" animated flash infinite ">Tutors</h2>
 
                 <span class="y-us-title-border"></span>
             </div>

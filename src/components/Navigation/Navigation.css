@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     align-items: stretch;
-    
+
 }
 
 #sidebar {
@@ -149,4 +149,6 @@ color:yellow;
 
 .navbar{
     position:absolute;
+    box-shadow: none !important;
+    padding:4.5rem 0.6rem!important;
 }

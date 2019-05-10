@@ -7,7 +7,7 @@ class MainSearch extends Component{
     render(){
         return (
             <div>
-            <div class="text-center bg-img">
+            <div class="text-center bg-img bg-overlay">
                 
                 <div class="wrap">
                        
@@ -23,6 +23,11 @@ class MainSearch extends Component{
                             
                             placeholder="Subjects"
                         />
+                            <input
+                                type="text"
+
+                                placeholder="Offline/Online"
+                            />
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>
@@ -37,7 +42,7 @@ class MainSearch extends Component{
                                 <div class="row">
                                     <div class="col-4  box-count bord-right mt-2">
                                         <h5>Total Current Tutors</h5>
-                                        <p class="figure-number">999</p>
+                                        <p class="figure-number animated zoomIn infinite">999</p>
                                     </div>
                                     <div class="col-4  box-count bord-right mt-2">
                                         <h5>Total Current Students</h5>

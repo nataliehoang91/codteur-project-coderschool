@@ -8,6 +8,7 @@ import TutorDisplay from "./TutorsDisplay";
 import ExtraInfo from "./ExtraInfo";
 import Steps from "./Steps"
 import Why from "./Why"
+import Canvas from "./canvas"
 
 class MainContent extends Component{
 render(){
@@ -20,6 +21,7 @@ render(){
       <ExtraInfo/>
       <Steps/>
       <Why/>
+      <canvas/>
       <Footer/>
         </div>
     )

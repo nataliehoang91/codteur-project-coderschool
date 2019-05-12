@@ -18,8 +18,9 @@ render(){
      
       <MainSearch/>
       <TutorDisplay/>
+        <Steps />
       <ExtraInfo/>
-      <Steps/>
+      
       <Why/>
       <canvas/>
       <Footer/>

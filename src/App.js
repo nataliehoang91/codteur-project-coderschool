@@ -4,7 +4,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./components/Navigation/Navigation";
 import MainContent from "./components/Main/MainContent";
-import Footer from "./components/Main/Footer";
+
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <div className="d-inline-block">
     
       <MainContent/>
-      
+        
       </div>
       
     </div>

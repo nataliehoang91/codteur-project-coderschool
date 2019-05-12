@@ -7,44 +7,93 @@ class SearchForm extends Component {
       <div class="search-bar-home horizontal">
         <form
           name="hemispherebundle_offer_search"
-         
           id="search-form"
-          class="main-search border-less-inputs background-dark narrow">
+          class="main-search border-less-inputs background-dark narrow"
+        >
           <div class="input-row">
-                    <input
-                        className="input-search-style"
-                        id="hemispherebundle_offer_search_latitude"
-                        name="hemispherebundle_offer_search[latitude]"
-                        placeholder="Offline/Online"
-                        class="location"
-                    />
-                    <input
-                        className="input-search-style"
-                        id="hemispherebundle_offer_search_latitude"
-                        name="hemispherebundle_offer_search[latitude]"
-                        placeholder="1 On 1/Group"
-                        class="location"
-                    />
+                    <div class="form-group">
+                        <div class="input-group search-geocoder">
+                            <span class="algolia-places">
+                                <input
+                                    type="text"
+                                    id="hemispherebundle_offer_search_location"
+                                    name="hemispherebundle_offer_search[location]"
+                                    class="location form-control ap-input"
+                                    placeholder="Subject"
+                                    autocomplete="off"
+                                    spellcheck="false"
+                                    role="combobox"
+                                    aria-autocomplete="both"
+                                    aria-expanded="false"
+                                    aria-owns="algolia-places-listbox-0"
+                                    dir="auto"
+                                />
+                                <pre aria-hidden="true" />
+                                <span
+                                    class="ap-dropdown-menu"
+                                    role="listbox"
+                                    id="algolia-places-listbox-0"
+                                >
+                                    <div class="ap-dataset-places" />
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select
+                            id="hemispherebundle_offer_search_sort"
+                            name="hemispherebundle_offer_search[sort]"
+                            title="Sort by"
+                            data-dropup-auto="false"
+                            class="form-control"
+                        >
+                            <option value="type">1 on 1</option>
+                            <option value="type">Group</option>
+                            
+                        </select>
+
+
+                    </div>
+                    <div class="form-group">
+                        <select
+                            id="hemispherebundle_offer_search_sort"
+                            name="hemispherebundle_offer_search[sort]"
+                            title="Sort by"
+                            data-dropup-auto="false"
+                            class="form-control"
+                        >
+                            
+                            <option value="city">Ha Noi</option>
+                            <option value="city">Ho Chi Minh City</option>
+                            <option value="city">Online</option>
+
+                        </select>
+
+
+                    </div>
+
+            <div class="form-group">
+              <select
+                id="hemispherebundle_offer_search_sort"
+                name="hemispherebundle_offer_search[sort]"
+                title="Sort by"
+                data-dropup-auto="false"
+                class="form-control"
+              >
+                <option value="rating">Location</option>
+                
+              </select>
+            
                     
-            <input
-                        className="input-search-style"
-              id="hemispherebundle_offer_search_latitude"
-              name="hemispherebundle_offer_search[latitude]"
-              placeholder="Enter course"
-              class="location"
-            />
-            <input
-                        className="input-search-style"
-              id="hemispherebundle_offer_search_longitude"
-              name="hemispherebundle_offer_search[longitude]"
-              placeholder="Choose Location"
-              class="location"
-            />
-                    
-                    <button type="submit" class="btn btn-default search-btn">
-                        Search
-              </button>
-          
+            </div>
+
+           
+
+            
+
+            <button type="submit" class="btn btn-default search-btn">
+              Search
+            </button>
           </div>
         </form>
       </div>

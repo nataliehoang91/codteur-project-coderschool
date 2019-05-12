@@ -12,7 +12,7 @@ function App() {
     <div className="d-inline-block">
       <Navigation/>
       </div>
-      <div className="d-inline-block w-100">
+      <div className="d-inline-block">
     
       <MainContent/>
       

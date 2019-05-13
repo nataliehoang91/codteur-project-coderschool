@@ -38,6 +38,7 @@ class Steps extends Component {
                 accommodations or needs.
               </p>
             </div>
+                   
           </div>
           <div className="col-6 how-it-works-step-graphic-right">
             <img
@@ -45,6 +46,12 @@ class Steps extends Component {
               alt=""
               class="how-it-works-image"
             />
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
           </div>
         </div>
         
@@ -55,27 +62,35 @@ class Steps extends Component {
               alt=""
               class="how-it-works-image"
             />
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
           </div>
+                
 
           <div
             id="how-it-works-step-2"
             class="how-it-works-step-right is-active  col-6"
           >
-            {" "}
+            
             <div class="how-it-works-step-content">
               <header class="how-it-works-step-header">
                 <h3 class="heading-3">2. Receive personalized matches</h3>
-              </header>{" "}
+              </header>
               <p class="how-it-works-text">
                 We send your request to Gooroos who are a good fit, and you’ll
                 get responses from tutors who are willing to help.
               </p>
-            </div>{" "}
+            </div>
+
           </div>
         </div>
             <div className="row">
                 <div
-                    className="col-6  how-it-works-step-left is-active"
+                    className="col-6 how-it-works-step-left is-active"
                     id="how-it-works-step-1"
                 >
                     <div class="how-it-works-step-content-left">
@@ -86,6 +101,7 @@ class Steps extends Component {
                             Book your favorite Gooroo match and learn with them in person! If you’re not satisfied for any reason with your first session, get another match and session - on us.
               </p>
                     </div>
+                   
                 </div>
                 <div className="col-6 how-it-works-step-graphic-right">
                     <img
@@ -93,6 +109,12 @@ class Steps extends Component {
                         alt=""
                         class="how-it-works-image"
                     />
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
                 </div>
             </div>
             <div className="row">
@@ -102,22 +124,29 @@ class Steps extends Component {
                         alt=""
                         class="how-it-works-image"
                     />
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
+                    <div class="vc_empty_space">
+                        <span class="vc_empty_space_inner" />
+                    </div>
                 </div>
 
                 <div
                     id="how-it-works-step-2"
                     class="how-it-works-step-right is-active  col-6"
                 >
-                    {" "}
+                   
                     <div class="how-it-works-step-content">
                         <header class="how-it-works-step-header">
                             <h3 class="heading-3">4. Receive feedback</h3>
-                        </header>{" "}
+                        </header>
                         <p class="how-it-works-text">
                             We send your request to us who are a good fit, and you’ll
                             get responses from tutors who are willing to help.
               </p>
-                    </div>{" "}
+                    </div>
+                    
                 </div>
             </div>
       </div>

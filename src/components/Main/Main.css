@@ -1,5 +1,8 @@
 .title-font {
   font-family: "Baloo Bhai", cursive;
+  font-weight: 800;
+  font-size: 44px;
+  color:white;
 }
 
 .under-title-border {
@@ -307,7 +310,7 @@ service-3 .service-box .y-us-content h4 {
 }
 
 .btn-become-tutor {
-  border: 2px solid #fed36e !important;
+  border: 2px solid white !important;
   background-color: #34343400 !important;
   color: #f8f9fa !important;
   font-weight: bold;
@@ -438,7 +441,7 @@ form.main-search {
 }
 
 .btn-default {
-  background-color: #fed36d !important;
+  background-color:#f8c73f!important;
 }
 
 .featured-tutors {
@@ -498,14 +501,14 @@ form.main-search {
 }
 
 .subject-list {
-  background-color: rgba(68, 68, 68, 0.753);
+  background-color:white;
 }
 
 .subject-logo {
   width: 100px;
 }
 .subject-title {
-  color: #ffffff;
+  color: #050505;
   font-size: 18px;
   font-weight: 400;
 }
@@ -518,7 +521,7 @@ form.main-search {
 }
 .responsive-h5 {
   font-size: 42px;
-  color: #ffffff;
+  color:black;
   text-align: left;
   font-family: PT Sans;
   font-weight: 400;
@@ -531,7 +534,7 @@ form.main-search {
 }
 .subject-title-description {
   font-size: 20px;
-  color: #f7f7f7;
+  color: black;
   line-height: 200% !important;
   text-align: left;
   font-family: Open Sans;
@@ -574,4 +577,7 @@ form.main-search {
 }
 .how-it-works-text{
     color:black;
+}
+.mainlogo{
+  height:41px;
 }

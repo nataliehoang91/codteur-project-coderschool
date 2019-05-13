@@ -6,16 +6,25 @@ class Why extends Component {
     render() {
         return(
             <div>
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-2 col-sm-12 col-xs-12">
-                        <div class="y-us-head">
-                            <div class="y-us-title">
-                                <h2>Why choose us</h2>
-                                
-                                <span class="y-us-title-border"></span>
-                            </div>
-                        </div>
+                <div class="vc_empty_space">
+                    <span class="vc_empty_space_inner" />
+                </div>
+                <div className="row">
+                    <div class="section_custom_heading  ">
+                        <h2 class="responsive-h5 text-dark">How we are different?</h2>
                     </div>
+                </div>
+                <div className="row">
+                    <div className="section_custom_heading">
+                        <h2 className="subject-title-description text-dark">
+                            Quality - Reasonable Price - Highly Trust
+            </h2>
+                    </div>
+                </div>
+
+                <div class="under-title-border"> </div>
+                <div class="vc_empty_space">
+                    <span class="vc_empty_space_inner" />
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">

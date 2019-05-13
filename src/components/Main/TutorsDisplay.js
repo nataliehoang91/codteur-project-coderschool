@@ -32,7 +32,7 @@ class TutorDisplay extends Component {
             >
               <img
                 class="featured-tutor-profile-picture mt-4"
-                src="https://s3-ap-southeast-1.amazonaws.com/tutoroo/AliceG_5b7df2e6d74ad.png"
+                src="https://www.w3schools.com/howto/img_avatar2.png"
                 alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                 title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
               />
@@ -77,7 +77,7 @@ class TutorDisplay extends Component {
             >
               <img
                 class="featured-tutor-profile-picture"
-                src="https://s3-ap-southeast-1.amazonaws.com/tutoroo/AliceG_5b7df2e6d74ad.png"
+                src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png"
                 alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                 title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
               />
@@ -88,7 +88,7 @@ class TutorDisplay extends Component {
                   href="/learn-italian-with-alice-in-london-48676"
                   data-wide=""
                 >
-                  Alice
+                  Ben
                 </a>
               </h3>
               <div class="featured-tutor-course ">Python</div>
@@ -122,7 +122,7 @@ class TutorDisplay extends Component {
             >
               <img
                 class="featured-tutor-profile-picture"
-                src="https://s3-ap-southeast-1.amazonaws.com/tutoroo/AliceG_5b7df2e6d74ad.png"
+                src="http://impressions.vn/uploads/source/khach-hang/ce54bf11889067.562541ef7cde4.png"
                 alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                 title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
               />
@@ -133,10 +133,10 @@ class TutorDisplay extends Component {
                   href="/learn-italian-with-alice-in-london-48676"
                   data-wide=""
                 >
-                  Alice
+                  Tom
                 </a>
               </h3>
-              <div class="featured-tutor-course">Italian</div>
+              <div class="featured-tutor-course">GoLang</div>
               <div>
                 <span class="star-active popup-star popup-star2">
                   <i class="fa fa-star" />
@@ -155,7 +155,7 @@ class TutorDisplay extends Component {
                 </span>
               </div>
               <div class="featured-tutor-city">
-                <span class="fa fa-map-marker" /> London
+                <span class="fa fa-map-marker" /> HCMC
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ class TutorDisplay extends Component {
             >
               <img
                 class="featured-tutor-profile-picture"
-                src="https://s3-ap-southeast-1.amazonaws.com/tutoroo/AliceG_5b7df2e6d74ad.png"
+                src="https://storage.oxii.vn//Sites/OXII/Storage/Avatar/2019/1/24/avatar2.png"
                 alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                 title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
               />
@@ -178,10 +178,10 @@ class TutorDisplay extends Component {
                   href="/learn-italian-with-alice-in-london-48676"
                   data-wide=""
                 >
-                  Alice
+                  Ken
                 </a>
               </h3>
-              <div class="featured-tutor-course">Italian</div>
+              <div class="featured-tutor-course">Swift(iOS)</div>
               <div>
                 <span class="star-active popup-star popup-star2">
                   <i class="fa fa-star" />
@@ -200,7 +200,7 @@ class TutorDisplay extends Component {
                 </span>
               </div>
               <div class="featured-tutor-city">
-                <span class="fa fa-map-marker" /> London
+                <span class="fa fa-map-marker" /> Ha Noi
               </div>
             </div>
           </div>

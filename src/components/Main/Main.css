@@ -327,6 +327,7 @@ service-3 .service-box .y-us-content h4 {
 .bord-right {
   border-right: 2px solid #ffb503 !important;
 }
+
 .card {
   background-color: #faf6eff8 !important;
   background-clip: border-box !important;
@@ -337,10 +338,28 @@ service-3 .service-box .y-us-content h4 {
 }
 
 .nav-bg {
-  background-color: #07070724;
+  background-color: #07070700;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   width: 100%;
+  transition: background-color .3s ease-in-out;
 }
+
+.is-black {
+background-color:rgba(0, 0, 0, 0.336);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  transition: background-color .3s ease-in-out;
+}
+
 
 .with-nav-tabs.panel-default .nav-tabs > li > a,
 .with-nav-tabs.panel-default .nav-tabs > li > a:hover,
@@ -501,14 +520,14 @@ form.main-search {
 }
 
 .subject-list {
-  background-color:white;
+  background-color:#212121;
 }
 
 .subject-logo {
   width: 100px;
 }
 .subject-title {
-  color: #050505;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 400;
 }
@@ -521,7 +540,7 @@ form.main-search {
 }
 .responsive-h5 {
   font-size: 42px;
-  color:black;
+  color:rgb(255, 255, 255);
   text-align: left;
   font-family: PT Sans;
   font-weight: 400;
@@ -534,7 +553,7 @@ form.main-search {
 }
 .subject-title-description {
   font-size: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
   line-height: 200% !important;
   text-align: left;
   font-family: Open Sans;
@@ -555,6 +574,20 @@ form.main-search {
     text-align:left;
    
 }
+.how-it-works-step-graphic-right::before {
+   position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    box-shadow: 0 0 2px 8px #ffdb3c;
+    margin-left: -39px;
+   
+}
+    
+
+
 .how-it-works-step-left{
     border-right: .1rem solid #00bfc2; 
     padding-right: 2rem;
@@ -570,6 +603,18 @@ form.main-search {
     padding-right: 2rem;
     text-align:right;
 }
+
+.how-it-works-step-right::before{
+position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    box-shadow: 0 0 2px 8px #ffdb3c;
+    margin-left: -39px;
+
+}
 .how-it-works-step-right{
     border-left: .1rem solid #00bfc2; 
     padding-left: 2rem;
@@ -580,4 +625,97 @@ form.main-search {
 }
 .mainlogo{
   height:41px;
+}
+
+
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+.default-text {
+    color: #2BBBAD; 
+}
+
+.form-white .md-form label {
+  color: #fff; 
+}
+.form-white input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    
+    box-shadow: 0 1px 0 0 #fff; 
+}
+.form-white input[type=text]:focus:not([readonly]) + label {
+    color: #fff; 
+}
+.form-white input[type=password]:focus:not([readonly]) {
+    border-bottom: 1px solid rgb(14, 12, 12);
+    
+    box-shadow: 0 1px 0 0 #fff; 
+}
+.form-white input[type=password]:focus:not([readonly]) + label {
+    color: #fff; 
+}
+.form-white input[type=password], .form-white input[type=text] {
+    border-bottom: 1px solid #fff; 
+}
+.form-white .form-control:focus {
+    color: #fff;
+}
+.form-white .form-control {
+    color: #fff;
+}
+.form-white textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid rgb(8, 8, 8);
+    box-shadow: 0 1px 0 0 #fff;
+    color: #fff; 
+}
+.form-white textarea.md-textarea  {
+    border-bottom: 1px solid rgb(8, 8, 8);
+    color: #fff;
+}
+.form-white textarea.md-textarea:focus:not([readonly])+label {
+    color: #fff;
+}
+
+.login-form-button{
+  background-color:#f6b603;
+  color:white;
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-google{
+    background-color: rgb(199, 60, 60);
+    color: #fff;
+}
+.size-createacct{
+  font-size:20px !important;
+}
+ .default-text{
+color:#f6b603!important;
+ }
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 14px;
+    position: relative;   
+    z-index: 2;
+    color:black;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
 }

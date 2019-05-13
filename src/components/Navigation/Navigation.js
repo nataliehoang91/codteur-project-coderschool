@@ -57,7 +57,7 @@ render(){
 
 
                 <div class="sidebar-header">
-                    <h3>Navigation</h3>
+                
                     
                 </div>
                 <ul className="components">

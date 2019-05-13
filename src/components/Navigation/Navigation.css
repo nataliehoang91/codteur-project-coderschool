@@ -58,6 +58,7 @@ a, a:hover, a:focus {
 #sidebar .sidebar-header {
     padding: 20px;
     background: #494949a1;
+    height:63px;
 }
 
 #sidebar ul.components {

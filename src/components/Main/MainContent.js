@@ -8,21 +8,24 @@ import TutorDisplay from "./TutorsDisplay";
 import ExtraInfo from "./ExtraInfo";
 import Steps from "./Steps"
 import Why from "./Why"
-import Canvas from "./canvas"
+import Testimonials from "./Testimonials"
+
 
 class MainContent extends Component{
 render(){
     return(
         <div>
-        <SubNav/>
+        <SubNav isLogin={this.props.isLogin} current_user={this.props.current_user} LogOut={this.props.LogOut}/>
      
       <MainSearch/>
       <TutorDisplay/>
         <Steps />
-      <ExtraInfo/>
+        <Testimonials/>
+      
       
       <Why/>
-      <canvas/>
+      
+        <ExtraInfo />
       <Footer/>
         </div>
     )

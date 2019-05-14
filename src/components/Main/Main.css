@@ -230,7 +230,7 @@ service-3 .service-box .y-us-content h4 {
 /* https://previews.123rf.com/images/arrow/arrow1507/arrow150700016/42897129-online-education-background.jpg */
 
 .bg-img {
-  background-image: url("https://www.tutoroo.co/bundles/hemisphere/images/header-bg.jpeg?v=92");
+  /* background-image: url("https://www.tutoroo.co/bundles/hemisphere/images/header-bg.jpeg?v=92"); */
   background-size: cover;
   background-position: center center;
 
@@ -333,10 +333,17 @@ service-3 .service-box .y-us-content h4 {
   background-clip: border-box !important;
   border: 1px solid #070707 !important;
 }
-.wrap {
-  padding-top: 15%;
+.search-container {
+  position: relative;
+  text-align: center;
 }
-
+.wrap {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
 .nav-bg {
   background-color: #07070700;
   position: fixed;
@@ -349,7 +356,7 @@ service-3 .service-box .y-us-content h4 {
 }
 
 .is-black {
-background-color:rgba(0, 0, 0, 0.336);
+background-color:rgba(0, 0, 0, 0.726);
 
   position: fixed;
   top: 0;
@@ -437,8 +444,12 @@ background-color:rgba(0, 0, 0, 0.336);
   display: table;
   margin: 0 auto;
 }
-.search-bar-home > form {
+/* .search-bar-home > form {
   max-width: 1000px;
+} */
+
+.search-bar-home {
+  width: 100%;
 }
 
 .search-bar-home > form {
@@ -795,4 +806,66 @@ color:#f6b603!important;
 }
 html, body {
    overflow-x: hidden;
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 240px;
+  height: 30px;
+  padding: 10px 20px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 51px;
+  width: 280px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}
+
+.ui.form .field>.selection.dropdown>.dropdown.icon {
+  border: none;
 }

@@ -26,11 +26,17 @@ class MainApp extends Component {
         })
     }
 
-    LogIn=(isLogin,current_user)=>{
-        this.setState({isLogin: isLogin,current_user:current_user})
+    LogIn=(isLogin)=>{
+        this.setState({isLogin: isLogin})
+    }
+
+    handleUserInfo=(user)=>{
+        this.setState({
+            current_user: user
+        })
     }
     render(){
-        const childProps={isLogin:this.state.isLogin,current_user:this.state.current_user,LogOut:this.LogOut,LogIn:this.LogIn}
+        const childProps={isLogin:this.state.isLogin,current_user:this.state.current_user,LogOut:this.LogOut,LogIn:this.LogIn,handleUserInfo:this.handleUserInfo}
         return (
 
                 <div>

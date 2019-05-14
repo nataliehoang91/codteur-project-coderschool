@@ -24,9 +24,11 @@ class Login extends Component {
         this.setState({ isLogin: data.isLogin }, () => {
           if (this.state.isLogin) {
             sessionStorage.setItem("current_user", data.current_user);
-            this.props.LogIn(true,data.current_user);
+            this.props.LogIn(true);
+            this.props.handleUserInfo(data.current_user);
+            console.log(data.current_user)
             this.props.history.push('/');
-          }
+            }
           
         })
       );
@@ -99,7 +101,7 @@ class Login extends Component {
                     class="btn login-form-button waves-effect waves-light"
                     onClick={this.handleSubmit}
                   >
-                    Next
+                    LOGIN
                   </button>
                   <p class="divider-text">
                     <span class="bg-light">OR</span>

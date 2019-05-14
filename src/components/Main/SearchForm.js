@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Autosuggest from "react-autosuggest";
+import { Dropdown } from "semantic-ui-react";
 
 // Use your imagination to render suggestions.
 
@@ -9,9 +10,8 @@ class SearchForm extends Component {
     super();
 
     this.state = {
-      SubjectList: [],
-      suggestions: [],
-      value: ""
+      SubjectList: []
+     
     };
   }
   getSubjectList = async () => {
@@ -29,141 +29,79 @@ class SearchForm extends Component {
     this.getSubjectList();
   }
 
-  escapeRegexCharacters = str => {
-    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  };
-
-  getSuggestions = value => {
-    const escapedValue = this.escapeRegexCharacters(value.trim());
-    const regex = new RegExp("^" + escapedValue, "i");
-
-    return this.state.SubjectList.filter(subject => regex.test(subject.name));
-  };
-
-  getSuggestionValue = suggestion => {
-    return suggestion.name;
-  };
-
-  shouldRenderSuggestions = () => {
-    return true;
-  };
-
-  renderSuggestion = suggestion => {
-    return <span>{suggestion.name}</span>;
-  };
-
-  onChange = (event, { newValue, method }) => {
-    this.setState({
-      value: newValue
-    });
-  };
-
-  onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({
-      suggestions: this.getSuggestions(value)
-    });
-  };
-
-  onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: []
-    });
-  };
+  
 
   render() {
-    const { value, suggestions } = this.state;
-    const inputProps = {
-      placeholder: "Subject",
-      value,
-      onChange: this.onChange
-    };
+
+    const learningMethodOptions = [
+      { key: "1", value: "1", text: "1 on 1" },
+      { key: "2", value: "2", text: "Group" }
+    ];
+
+    const cityOptions = [
+      { key: "1", value: "1", text: "Ho Chi Minh" },
+      { key: "2", value: "2", text: "Hanoi" },
+      { key: "3", value: "3", text: "Da Nang" }
+    ];
+    
+    const locationOptions = [
+      { key: "1", value: "1", text: "Quan 1" },
+      { key: "2", value: "2", text: "Quan 2" },
+      { key: "3", value: "3", text: "Quan 3" },
+    ];
+
     return (
       <div class="search-bar-home horizontal">
         <form
           name="hemispherebundle_offer_search"
           id="search-form"
-          class="main-search border-less-inputs background-dark narrow"
+          // class="main-search border-less-inputs background-dark narrow"
+          class="ui form"
         >
-          <div class="input-row">
-            <Autosuggest
-              suggestions={suggestions}
-              onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-              onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-              getSuggestionValue={this.getSuggestionValue}
-              shouldRenderSuggestions={this.shouldRenderSuggestions}
-              renderSuggestion={this.enderSuggestion}
-              inputProps={inputProps}
-            />
-
-            <div class="form-group">
-              <div class="input-group search-geocoder">
-                <span class="algolia-places">
-                  <input
-                    type="text"
-                    id="hemispherebundle_offer_search_location"
-                    name="hemispherebundle_offer_search[location]"
-                    class="location form-control ap-input"
-                    placeholder="Subject"
-                    autocomplete="off"
-                    spellcheck="false"
-                    role="combobox"
-                    aria-autocomplete="both"
-                    aria-expanded="false"
-                    aria-owns="algolia-places-listbox-0"
-                    dir="auto"
-                  />
-                  <pre aria-hidden="true" />
-                  <span
-                    class="ap-dropdown-menu"
-                    role="listbox"
-                    id="algolia-places-listbox-0"
-                  >
-                    <div class="ap-dataset-places" />
-                  </span>
-                </span>
-              </div>
+          <div class="fields">
+            <div class="five wide field">
+              <Dropdown
+                placeholder="Select Subject"
+                fluid
+                search
+                selection
+                options={this.state.SubjectList}
+              />
             </div>
-            <div class="form-group">
-              <select
-                id="hemispherebundle_offer_search_sort"
-                name="hemispherebundle_offer_search[sort]"
-                title="Sort by"
-                data-dropup-auto="false"
-                class="form-control"
-              >
-                <option value="type">1 on 1</option>
-                <option value="type">Group</option>
-              </select>
+            <div class="three wide field">
+              <Dropdown
+                placeholder="Select Method"
+                fluid
+                search
+                selection
+                options={learningMethodOptions}
+              />
             </div>
-            <div class="form-group">
-              <select
-                id="hemispherebundle_offer_search_sort"
-                name="hemispherebundle_offer_search[sort]"
-                title="Sort by"
-                data-dropup-auto="false"
-                class="form-control"
-              >
-                <option value="city">Ha Noi</option>
-                <option value="city">Ho Chi Minh City</option>
-                <option value="city">Online</option>
-              </select>
+            <div class="three wide field">
+              <Dropdown
+                placeholder="Select City"
+                fluid
+                search
+                selection
+                options={cityOptions}
+              />
             </div>
 
-            <div class="form-group">
-              <select
-                id="hemispherebundle_offer_search_sort"
-                name="hemispherebundle_offer_search[sort]"
-                title="Sort by"
-                data-dropup-auto="false"
-                class="form-control"
-              >
-                <option value="rating">Location</option>
-              </select>
+            <div class="three wide field">
+              <Dropdown
+                placeholder="Select City"
+                fluid
+                search
+                selection
+                options={locationOptions}
+              />
             </div>
 
-            <button type="submit" class="btn btn-default search-btn">
-              Search
-            </button>
+            <div className="two wide field">
+              <button type="submit" class="btn btn-default search-btn btn-block">
+                Search
+              </button>
+            </div>
           </div>
         </form>
       </div>

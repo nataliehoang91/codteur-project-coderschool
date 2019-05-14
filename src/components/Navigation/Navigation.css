@@ -149,7 +149,13 @@ color:yellow;
 }
 
 .navbar{
-    position:absolute;
+    position: absolute;;
     box-shadow: none !important;
     padding:4.5rem 0.6rem!important;
+}
+
+#sidebarCollapse {
+    z-index: 99;
+    position: fixed;
+    
 }

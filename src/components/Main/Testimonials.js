@@ -16,7 +16,7 @@ class Testimonials extends Component {
         <div className="row">
           <div className="section_custom_heading">
             <h2 className="subject-title-description text-dark">
-              Quality - Reasonable Price - Highly Trust
+              Sharing from our Testimonials
             </h2>
           </div>
         </div>
@@ -25,113 +25,78 @@ class Testimonials extends Component {
         <div class="vc_empty_space">
           <span class="vc_empty_space_inner" />
         </div>
+        <div class="vc_empty_space">
+          <span class="vc_empty_space_inner" />
+        </div>
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
           data-ride="carousel"
         >
-          <ol class="carousel-indicators">
+          <ol class="carousel-indicators extra-padding">
             <li
               data-target="#carouselExampleIndicators"
               data-slide-to="0"
               class="active"
             />
-            <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-            <li data-target="#carouselExampleIndicators" data-slide-to="2" />
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="1"
+            />
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="2"
+            />
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div className="row">
-                <div className="row">
-                  <div class="col-6">
-                    <section class="testimonial" aria-label="testimonal">
-                      <div class="row">
-                        <div class="col-5">
-                          <img
-                            class="img-responsive"
-                            src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13417432_872785662833463_7712321988284559378_n.jpg?oh=c4db85f59f8311a6b1b102f71cc4576d&oe=58A4F449"
-                            alt="descrie"
-                          />
-                        </div>
-                        <div class="col-7">
-                          <blockquote aria-label="testimonial comment">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            book.
-                            <cite aria-label="author of testimonial">
-                              - Some Student
-                            </cite>
-                          </blockquote>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                  <div className="col-6">
-                    {" "}
-                    <section class="testimonial" aria-label="testimonal">
-                      <div class="row">
-                        <div class="col-5">
-                          <img
-                            class="img-responsive"
-                            src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13417432_872785662833463_7712321988284559378_n.jpg?oh=c4db85f59f8311a6b1b102f71cc4576d&oe=58A4F449"
-                            alt="descrie"
-                          />
-                        </div>
-                        <div class="col-md-7">
-                          <blockquote aria-label="testimonial comment">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            book.
-                            <cite aria-label="author of testimonial">
-                              - Some Student
-                            </cite>
-                          </blockquote>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item ">
-              <div className="row">
-                <div class="col-6">
+              <div class="row">
+                <div class="col-md-6">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <img
                           class="img-responsive"
-                          src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13417432_872785662833463_7712321988284559378_n.jpg?oh=c4db85f59f8311a6b1b102f71cc4576d&oe=58A4F449"
-                          alt="descrie"
+                          src="https://assets1.biggerpockets.com/uploads/social_user/user_avatar/838306/big_1541461757-avatar-justinfay.jpg"
+                          alt="description of image"
+                          alt="description of image"
                         />
                       </div>
                       <div class="col-md-7">
                         <blockquote aria-label="testimonial comment">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          book.
+                          Lorem Ipsum is simply dummy text of the printing
+                          and typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the
+                          1500s, when an unknown printer took make a type
+                          specimen book.
                           <cite aria-label="author of testimonial">
-                            - Some Student
+                            - Some Student, '17
                           </cite>
                         </blockquote>
                       </div>
                     </div>
                   </section>
                 </div>
-                <div className="col-6">
-                  {" "}
+                <div class="col-md-6">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <img
                           class="img-responsive"
-                          src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13417432_872785662833463_7712321988284559378_n.jpg?oh=c4db85f59f8311a6b1b102f71cc4576d&oe=58A4F449"
-                          alt="descrie"
+                          src="https://www.gannett-cdn.com/-mm-/1406738037af2189b628f886370bcb5a46e24595/c=0-0-1882-1415/local/-/media/USATODAY/USATODAY/2014/11/07/635509882498682692-138017387.jpg?width=534&height=401&fit=crop"
+                          alt="description of image"
+                          alt="description of image"
                         />
                       </div>
                       <div class="col-md-7">
                         <blockquote aria-label="testimonial comment">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          book.
+                          Lorem Ipsum is simply dummy text of the printing
+                          and typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the
+                          1500s, when an unknown printer took make a type
+                          specimen book.
                           <cite aria-label="author of testimonial">
-                            - Some Student
+                            - Some Student, '17
                           </cite>
                         </blockquote>
                       </div>
@@ -141,46 +106,109 @@ class Testimonials extends Component {
               </div>
             </div>
             <div class="carousel-item">
-              <div className="row">
-                <div class="col-6">
+              <div class="row">
+                <div class="col-md-6">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <img
                           class="img-responsive"
-                          src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13417432_872785662833463_7712321988284559378_n.jpg?oh=c4db85f59f8311a6b1b102f71cc4576d&oe=58A4F449"
-                          alt="descrie"
+                          src="https://assets1.biggerpockets.com/uploads/social_user/user_avatar/838306/big_1541461757-avatar-justinfay.jpg"
+                          alt="description of image"
+                          alt="description of image"
                         />
                       </div>
                       <div class="col-md-7">
                         <blockquote aria-label="testimonial comment">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          book.
+                          Lorem Ipsum is simply dummy text of the printing
+                          and typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the
+                          1500s, when an unknown printer took make a type
+                          specimen book.
                           <cite aria-label="author of testimonial">
-                            - Some Student
+                            - Some Student, '17
                           </cite>
                         </blockquote>
                       </div>
                     </div>
                   </section>
                 </div>
-                <div className="col-6">
-                  {" "}
+                <div class="col-md-6">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">
-                      <div class="col-5">
+                      <div class="col-md-5">
                         <img
                           class="img-responsive"
-                          src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13417432_872785662833463_7712321988284559378_n.jpg?oh=c4db85f59f8311a6b1b102f71cc4576d&oe=58A4F449"
-                          alt="descrie"
+                          src="https://www.gannett-cdn.com/-mm-/1406738037af2189b628f886370bcb5a46e24595/c=0-0-1882-1415/local/-/media/USATODAY/USATODAY/2014/11/07/635509882498682692-138017387.jpg?width=534&height=401&fit=crop"
+                          alt="description of image"
+                          alt="description of image"
                         />
                       </div>
                       <div class="col-md-7">
                         <blockquote aria-label="testimonial comment">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          book.
+                          Lorem Ipsum is simply dummy text of the printing
+                          and typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the
+                          1500s, when an unknown printer took make a type
+                          specimen book.
                           <cite aria-label="author of testimonial">
-                            - Some Student
+                            - Some Student, '17
+                          </cite>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-6">
+                  <section class="testimonial" aria-label="testimonal">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <img
+                          class="img-responsive"
+                          src="https://assets1.biggerpockets.com/uploads/social_user/user_avatar/838306/big_1541461757-avatar-justinfay.jpg"
+                          alt="description of image"
+                          alt="description of image"
+                        />
+                      </div>
+                      <div class="col-md-7">
+                        <blockquote aria-label="testimonial comment">
+                          Lorem Ipsum is simply dummy text of the printing
+                          and typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the
+                          1500s, when an unknown printer took make a type
+                          specimen book.
+                          <cite aria-label="author of testimonial">
+                            - Some Student, '17
+                          </cite>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div class="col-md-6">
+                  <section class="testimonial" aria-label="testimonal">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <img
+                          class="img-responsive"
+                          src="https://www.gannett-cdn.com/-mm-/1406738037af2189b628f886370bcb5a46e24595/c=0-0-1882-1415/local/-/media/USATODAY/USATODAY/2014/11/07/635509882498682692-138017387.jpg?width=534&height=401&fit=crop"
+                          alt="description of image"
+                          alt="description of image"
+                        />
+                      </div>
+                      <div class="col-md-7">
+                        <blockquote aria-label="testimonial comment">
+                          Lorem Ipsum is simply dummy text of the printing
+                          and typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the
+                          1500s, when an unknown printer took make a type
+                          specimen book.
+                          <cite aria-label="author of testimonial">
+                            - Some Student, '17
                           </cite>
                         </blockquote>
                       </div>

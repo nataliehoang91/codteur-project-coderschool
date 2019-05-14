@@ -22,7 +22,9 @@ class Steps extends Component {
         </div>
 
         <div class="under-title-border"> </div>
-
+        <div class="vc_empty_space">
+          <span class="vc_empty_space_inner" />
+        </div>
         <div className="row ">
           <div
             className="col-6  how-it-works-step-left"
@@ -42,7 +44,7 @@ class Steps extends Component {
           </div>
           <div className="col-6 how-it-works-step-graphic-right">
             <img
-              src="img/step-1.png"
+              src = "/img/step-1.png"
               alt=""
               class="how-it-works-image"
             />
@@ -58,7 +60,7 @@ class Steps extends Component {
         <div className="row">
           <div className="col-6 how-it-works-step-graphic-left">
             <img
-                        src="img/step-2.png"
+                        src = "/img/step-2.png"
               alt=""
               class="how-it-works-image"
             />
@@ -105,7 +107,7 @@ class Steps extends Component {
                 </div>
                 <div className="col-6 how-it-works-step-graphic-right">
                     <img
-                        src="img/step-3.png"
+                        src = "/img/step-3.png"
                         alt=""
                         class="how-it-works-image"
                     />
@@ -120,7 +122,7 @@ class Steps extends Component {
             <div className="row">
                 <div className="col-6 how-it-works-step-graphic-left">
                     <img
-                        src="img/step-4.png"
+                        src = "/img/step-4.jpg"
                         alt=""
                         class="how-it-works-image"
                     />

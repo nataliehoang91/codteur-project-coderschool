@@ -2,6 +2,10 @@ footer.nb-footer {
 background: #222;
 border-top: 1px solid #f7c73f; }
 
+footer{
+    font-family: 'Poppins',
+    sans-serif;
+}
 
 footer.nb-footer .about p {
 font-size: 13px;

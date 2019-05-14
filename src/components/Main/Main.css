@@ -182,12 +182,12 @@
 }
 
 .service-3 .service-box {
-  margin-bottom: 18px;
+  margin-bottom: 50px;
 }
 .service-3 .service-box .iconset {
   float: left;
   text-align: center;
-  width: 25%;
+  width: 14%;
 }
 .service-3 .service-box .iconset i {
   color: #000;
@@ -195,7 +195,7 @@
 }
 .service-3 .service-box .y-us-content {
   float: left;
-  width: 75%;
+  width: 50%;
 }
 service-3 .service-box .y-us-content h4 {
   color: #3a3a3a;
@@ -219,6 +219,19 @@ service-3 .service-box .y-us-content h4 {
   border: 1px solid #fdb801;
   border-radius: 100px;
   color: #fdb801;
+  font-size: 28px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  width: 70px;
+}
+.icon-us {
+  color: #f4b841;
+  padding: 0px;
+  font-size: 40px;
+  border: 1px solid #0a0a0a;
+  border-radius: 100px;
+  color: #000000;
   font-size: 28px;
   height: 70px;
   line-height: 70px;
@@ -339,7 +352,7 @@ service-3 .service-box .y-us-content h4 {
 }
 .wrap {
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
@@ -356,7 +369,7 @@ service-3 .service-box .y-us-content h4 {
 }
 
 .is-black {
-background-color:rgba(0, 0, 0, 0.726);
+ background-color:rgb(0, 0, 0);
 
   position: fixed;
   top: 0;
@@ -453,9 +466,11 @@ background-color:rgba(0, 0, 0, 0.726);
 }
 
 .search-bar-home > form {
-  padding: 20px;
+  padding: 6px;
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 10px;
+      
+      padding-top: 20px;
 }
 
 form.main-search {
@@ -483,8 +498,8 @@ form.main-search {
   margin: 0 auto 30px;
 }
 .featured-tutor .featured-tutor-profile-picture {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
   display: block;
   border-radius: 100px;
@@ -572,7 +587,7 @@ form.main-search {
   font-style: normal;
 }
 .steps-bg{
-    background-color:antiquewhite;
+    background-color:rgb(255, 255, 255);
 }
 /* .how-it-works-step-content-left{
     border-right: .2rem solid #00bfc2;
@@ -580,7 +595,7 @@ form.main-search {
        
 } */
 .how-it-works-step-graphic-right {
-    border-left: .1rem solid #00bfc2; 
+    border-left: .1rem solid #050505; 
     padding-left: 2rem;
     text-align:left;
    
@@ -593,14 +608,14 @@ form.main-search {
     background-color: #ffffff;
     border-radius: 9px;
     box-shadow: 0 0 2px 8px #ffdb3c;
-    margin-left: -39px;
+    margin-left: -35px;
    
 }
     
 
 
 .how-it-works-step-left{
-    border-right: .1rem solid #00bfc2; 
+    border-right: .1rem solid #000000; 
     padding-right: 2rem;
      text-align:right;
 }
@@ -610,7 +625,7 @@ form.main-search {
 }
 
 .how-it-works-step-graphic-left{
-    border-right: .1rem solid #00bfc2; 
+    border-right: .1rem solid #000000; 
     padding-right: 2rem;
     text-align:right;
 }
@@ -623,11 +638,11 @@ position: absolute;
     background-color: #ffffff;
     border-radius: 9px;
     box-shadow: 0 0 2px 8px #ffdb3c;
-    margin-left: -39px;
+    margin-left: -35px;
 
 }
 .how-it-works-step-right{
-    border-left: .1rem solid #00bfc2; 
+    border-left: .1rem solid #000000; 
     padding-left: 2rem;
     text-align:left;
 }
@@ -742,7 +757,7 @@ color:#f6b603!important;
 	border-style: solid;
 	border-width:5px 1px 1px;
 	margin:15px 0;
-  border-color: #cfb87c #ddd #ddd;
+  border-color: #f7c73f rgb(15, 15, 15) rgb(29, 29, 29);
 }
 
 .testimonial img {
@@ -803,6 +818,10 @@ color:#f6b603!important;
 		max-width:200px;
 	}
 	
+}
+
+.extra-padding{
+  bottom:-55px !important;
 }
 html, body {
    overflow-x: hidden;

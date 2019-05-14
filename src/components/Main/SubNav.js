@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class SubNav extends Component{
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {};
 
         this.handleScroll = this.handleScroll.bind(this);
     }
 
-    handleScroll() {
+    handleScroll=()=> {
         this.setState({ scroll: window.scrollY });
     }
     componentDidMount() {
@@ -18,9 +18,7 @@ class SubNav extends Component{
         window.addEventListener('scroll', this.handleScroll);
     }
 
-    handleLoginToggle=()=>{
-
-    }
+  
     render(){
         
 

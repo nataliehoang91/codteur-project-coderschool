@@ -5,13 +5,17 @@ class Login extends Component {
   state = {
     email: "",
     password: "",
-    isLogin: ""
+    message:""
   };
-  postUserLogin(data) {
+
+  postUserLogin = data => {
+    console.log(JSON.stringify(data))
     fetch("http://localhost:5000/login", {
       method: "POST",
+
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Accept": "application/json"
       },
       body: JSON.stringify(data)
     })
@@ -20,10 +24,13 @@ class Login extends Component {
         this.setState({ isLogin: data.isLogin }, () => {
           if (this.state.isLogin) {
             sessionStorage.setItem("current_user", data.current_user);
+            this.props.LogIn(true,data.current_user);
+            this.props.history.push('/');
           }
+          
         })
       );
-  }
+  };
 
   handleInputOnChange = e => {
     console.log(e.target.name, e.target.value);
@@ -38,15 +45,15 @@ class Login extends Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    const { username, password } = this.state;
-    this.postUserLogin({ username: username, password: password });
+    const { email, password,message } = this.state;
+    this.postUserLogin({ email, password,message });
   };
   render() {
     return (
       <div className="container">
         <div class="row justify-content-center form-white">
           <div class="col-md-6 mt-5">
-                    <div class="card bg-login bg-white">
+            <div class="card bg-login bg-white">
               <div class="card-body">
                 <h3 class="text-center default-text py-3">
                   <i class="fa fa-lock" /> Login:
@@ -94,10 +101,12 @@ class Login extends Component {
                   >
                     Next
                   </button>
-                                <p class="divider-text">
-                                    <span class="bg-light">OR</span>
-                                </p>
-                                <a href="a"><button>Sign Up</button> </a>
+                  <p class="divider-text">
+                    <span class="bg-light">OR</span>
+                  </p>
+                  <a href="/signup">
+                    <button>Sign Up</button>
+                  </a>
                 </div>
               </div>
             </div>

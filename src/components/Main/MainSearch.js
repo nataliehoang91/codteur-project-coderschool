@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Searchform from "./SearchForm"
+import Autosuggest from 'react-autosuggest';
 
 class MainSearch extends Component{
 

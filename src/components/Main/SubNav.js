@@ -18,7 +18,9 @@ class SubNav extends Component{
         window.addEventListener('scroll', this.handleScroll);
     }
 
-   
+    handleLoginToggle=()=>{
+
+    }
     render(){
         
 
@@ -33,7 +35,7 @@ class SubNav extends Component{
                     {!this.props.isLogin ?(
                             <a href={"/login/"}><button class="btn btn-become-tutor my-2 my-sm-0" type="submit">Login</button></a>) : (<button class="btn btn-become-tutor my-2 my-sm-0" type="submit" onClick={this.props.LogOut}>Logout</button >)}
                         <button class="btn btn-become-tutor my-2 my-sm-0" type="submit">Become a Tutor</button>
-                        
+                        {this.props.isLogin.current_user}
 
                     </div>
                     </div>

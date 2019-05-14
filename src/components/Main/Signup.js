@@ -3,12 +3,40 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 class Signup extends Component {
    
+    state = {username: "",
+    email: "",
+    password: "",
+    message: "",
+    classMessage:"",
+    
+}
+
+    postUserSignup=(data)=> {
+        const url = "http://localhost:5000/signup";
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                if (data.success) {
+                    sessionStorage.setItem('current_user', data.username);
+                    this.setState({ message: "Successful", classMessage: 'alert-success'})
+                }
+                else {
+                    
+                    this.setState({ message: "UnSuccessful", classMessage:'alert-danger' })
+                }
+            }
+            )
+    }
 
     handleInputOnChange = e => {
         console.log(e.target.name, e.target.value);
         this.setState(
             {
-
                 [e.target.name]: e.target.value
             },
             () => {
@@ -18,12 +46,35 @@ class Signup extends Component {
     };
     handleSubmit = (event) => {
         event.preventDefault();
-        const { username, password } = this.state;
-        this.postUserLogin({ username: username, password: password });
+        const { username, email, password } = this.state;
+        this.postUserSignup({ username, email, password });
     }
     render() {
+        const color = `alert ${this.state.classMessage}`;
         return (
             <div className="container">
+            {this.state.message ? (
+                    <div className={color}>
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                            ×</button>
+                        <span class="glyphicon glyphicon-ok"></span>
+
+                        {this.state.message}
+                    </div>
+
+            ):
+                
+                    
+           (<span></span>)
+            
+            
+            
+            }
+              
+                
+
+
+
 
                 <div class="row justify-content-center form-white">
 
@@ -56,6 +107,7 @@ class Signup extends Component {
                                 </div>
                                 <div class="text-center">
                                     <button class="btn login-form-button waves-effect waves-light" onClick={this.handleSubmit}>Submit</button>
+                                    <a href="/"> <button class="btn login-form-button waves-effect waves-light" >Proceed to homepage </button></a>
                                 </div>
                             </div>
                         </div>

@@ -34,7 +34,7 @@ class SearchForm extends Component {
   render() {
 
     const learningMethodOptions = [
-      { key: "1", value: "1", text: "1 on 1" },
+      { key: "1", value: "1", text: "Private" },
       { key: "2", value: "2", text: "Group" }
     ];
 

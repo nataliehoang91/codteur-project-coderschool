@@ -621,7 +621,7 @@ form.main-search {
 }
 
 .how-it-works-image{
-    width: 300px;
+    width: 250px;
 }
 
 .how-it-works-step-graphic-left{
@@ -887,4 +887,15 @@ html, body {
 
 .ui.form .field>.selection.dropdown>.dropdown.icon {
   border: none;
+}
+
+.how-it-works-text-right{
+  width: 70%;
+  float:left;
+  color:black;
+}
+.how-it-works-text-left {
+  width: 70%;
+  float: right;
+  color:black;
 }

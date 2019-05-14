@@ -34,7 +34,7 @@ class Steps extends Component {
               <header class="how-it-works-step-header">
                 <h3 class="heading-3">1. Request Tutor</h3>
               </header>
-              <p class="how-it-works-text ">
+              <p class="how-it-works-text-left">
                 Tell us what you want to learn, and where and when you want to
                 learn it. Let us know if you have any specific learning
                 accommodations or needs.
@@ -82,7 +82,7 @@ class Steps extends Component {
               <header class="how-it-works-step-header">
                 <h3 class="heading-3">2. Receive personalized matches</h3>
               </header>
-              <p class="how-it-works-text">
+              <p class="how-it-works-text-right">
                 We send your request to Gooroos who are a good fit, and you’ll
                 get responses from tutors who are willing to help.
               </p>
@@ -99,8 +99,8 @@ class Steps extends Component {
                         <header class="how-it-works-step-header">
                             <h3 class="heading-3">3. Book and have a great first session - guaranteed!</h3>
                         </header>
-                        <p class="how-it-works-text">
-                            Book your favorite Gooroo match and learn with them in person! If you’re not satisfied for any reason with your first session, get another match and session - on us.
+                        <p class="how-it-works-text-left">
+                            Book your favorite tutor match and learn with them in person! If you’re not satisfied for any reason with your first session, get another match and session - on us.
               </p>
                     </div>
                    
@@ -143,7 +143,7 @@ class Steps extends Component {
                         <header class="how-it-works-step-header">
                             <h3 class="heading-3">4. Receive feedback</h3>
                         </header>
-                        <p class="how-it-works-text">
+                        <p class="how-it-works-text-right">
                             We send your request to us who are a good fit, and you’ll
                             get responses from tutors who are willing to help.
               </p>

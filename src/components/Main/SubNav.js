@@ -11,28 +11,28 @@ class SubNav extends Component{
     }
 
     handleScroll=()=> {
-        console.log(window.scrollY)
+        
         this.setState({ scroll: window.scrollY });
     }
-    
+
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
 
   
     render(){
-        
+      
 
         return(
-            <div id="navbartoggle" className={this.state.scroll > 500 ? "is-black nav-bg" : "nav-bg"}>
+            <div id="navbartoggle" className={this.state.scroll > 400 ? "is-black nav-bg" : "nav-bg"}>
                 <div class=" d-flex justify-content-between py-2">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-logo">
                         <img class="mainlogo img-responsive ml-3" src="/img/logonew.png" alt="logo"></img>
                         
                         </div>
                     <div>
-                    {this.props.current_user ?(
-                        <span className="text-white"><img className="ava-on-nav mr-2" src="/img/logo.png" alt="ava"/>{this.props.current_user}</span>):
+                    {this.props.isLogin ?(
+                        <span className="text-white"><img className="ava-on-nav mr-2" src={this.props.user_img} alt="ava"/>{this.props.current_user}</span>):
                         (<span></span>)}
                         
                     {!this.props.isLogin ?(

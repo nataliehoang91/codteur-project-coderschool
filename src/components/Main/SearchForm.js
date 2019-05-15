@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Autosuggest from "react-autosuggest";
+
 import { Dropdown } from "semantic-ui-react";
 
 // Use your imagination to render suggestions.
@@ -12,7 +12,10 @@ class SearchForm extends Component {
     this.state = {
       SubjectList: [],
       LocationList: [],
-      CityList: []
+      CityList: [],
+      selectedSubject:"",
+      selectedLocation: "",
+      tutors: []
     };
   }
   getSubjectList = async () => {
@@ -36,12 +39,37 @@ class SearchForm extends Component {
       () => console.log(this.state.LocationList)
     );
   };
-
+handleOnSeclect = (e,data) =>{
+  
+  
+  
+  this.setState(
+    {
+      selectedSubject: data.value
+    },
+    () => {
+      console.log(this.state.selectedValue);
+    }
+  );
+}
   componentDidMount() {
     this.getSubjectList();
     this.getLocationList();
   }
 
+  handleSubmit = async(e) => {
+    e.preventDefault();
+    let resp = await fetch(`http://localhost:5000/tutors?location=${this.state.selectedSubject}`);
+    let result = await resp.json();
+    console.log(result)
+    this.setState({
+      tutors: result
+    },() => console.log(this.state.tutors))
+      
+    // Make a fetch request.
+    // get the data
+    // this.setState( data you receive )
+  }
   render() {
     let SubjectListSelection = this.state.SubjectList.map(subject => { return { key:subject.id, value: subject.id, text:subject.name} });
     let LocationListSelection = this.state.LocationList.map(item => { return { key: item.id, value: item.id, text: item.name } });
@@ -52,16 +80,13 @@ class SearchForm extends Component {
     ];
 
     const cityOptions = [
-      { key: "1", value: "1", text: "Ho Chi Minh" },
-      { key: "2", value: "2", text: "Hanoi" },
-      { key: "3", value: "3", text: "Da Nang" }
+      { key: "1", value: "1", text: "Ho Chi Minh"},
+      {
+        key: "2", value: "2", text: "Hanoi"},
+      { key: "3", value: "3", text: "Da Nang"}
     ];
 
-    const locationOptions = [
-      { key: "1", value: "1", text: "Quan 1" },
-      { key: "2", value: "2", text: "Quan 2" },
-      { key: "3", value: "3", text: "Quan 3" }
-    ];
+    
 
     return (
       <div class="search-bar-home horizontal">
@@ -70,6 +95,7 @@ class SearchForm extends Component {
           id="search-form"
           // class="main-search border-less-inputs background-dark narrow"
           class="ui form"
+          onSubmit={e => this.handleSubmit(e)}
         >
           <div class="fields">
             <div class="five wide field">
@@ -79,6 +105,7 @@ class SearchForm extends Component {
                 search
                 selection
                 options={SubjectListSelection}
+                onChange={this.handleOnSeclect}
               />
             </div>
             <div class="three wide field">
@@ -107,19 +134,25 @@ class SearchForm extends Component {
                 search
                 selection
                 options={LocationListSelection}
+                
               />
             </div>
 
             <div className="two wide field">
-              <button
-                type="submit"
-                class="btn btn-default search-btn btn-block"
-              >
-                Search
-              </button>
+              <a href={"/login/"}>
+                <button
+                  type="submit"
+                  class="btn btn-default search-btn btn-block"
+                >
+                  Search
+                </button>
+              </a>
             </div>
           </div>
         </form>
+        <div>
+          { this.state.tutors.map (t => <li> {t.name} </li>)}
+        </div>
       </div>
     );
   }

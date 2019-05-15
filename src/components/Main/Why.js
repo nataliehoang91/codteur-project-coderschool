@@ -37,7 +37,7 @@ class Why extends Component {
                         <span class="vc_empty_space_inner" />
                     </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-12 offset-2">
                         <div class="y-us-content">
                             <div class="service-3">
         
@@ -56,7 +56,7 @@ class Why extends Component {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="y-us-content">
                             <div class="service-3">
 
@@ -77,7 +77,7 @@ class Why extends Component {
                     </div>
 </div>
 <div className="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-12 offset-2">
                         <div class="y-us-contentbox">
                             <div class="service-3">
                                 
@@ -96,7 +96,7 @@ class Why extends Component {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="y-us-contentbox">
                             <div class="service-3">
 

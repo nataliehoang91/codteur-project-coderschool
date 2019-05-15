@@ -1,10 +1,9 @@
-import React,{Component} from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import Login from "./components/Main/Login"
-import Signup from "./components/Main/Signup"
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import MainApp from "./MainApp"
     

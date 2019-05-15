@@ -29,22 +29,22 @@ class Testimonials extends Component {
           <span class="vc_empty_space_inner" />
         </div>
         <div
-          id="carouselExampleIndicators"
+          id="test"
           class="carousel slide"
-          data-ride="carousel"
+          
         >
           <ol class="carousel-indicators extra-padding">
             <li
-              data-target="#carouselExampleIndicators"
+              data-target="#test"
               data-slide-to="0"
               class="active"
             />
             <li
-              data-target="#carouselExampleIndicators"
+              data-target="#test"
               data-slide-to="1"
             />
             <li
-              data-target="#carouselExampleIndicators"
+              data-target="#test"
               data-slide-to="2"
             />
           </ol>
@@ -220,7 +220,7 @@ class Testimonials extends Component {
           </div>
           <a
             class="carousel-control-prev"
-            href="#carouselExampleIndicators"
+            href="#test"
             role="button"
             data-slide="prev"
           >
@@ -229,7 +229,7 @@ class Testimonials extends Component {
           </a>
           <a
             class="carousel-control-next"
-            href="#carouselExampleIndicators"
+            href="#test"
             role="button"
             data-slide="next"
           >

@@ -58,11 +58,11 @@ class Steps extends Component {
         </div>
         
         <div className="row">
-          <div className="col-6 how-it-works-step-graphic-left">
+          <div className="col-6 how-it-works-step-graphic-left " >
             <img
                         src = "/img/step-2.png"
               alt=""
-              class="how-it-works-image"
+              class = "how-it-works-image size-adjust"
             />
                     <div class="vc_empty_space">
                         <span class="vc_empty_space_inner" />
@@ -124,7 +124,7 @@ class Steps extends Component {
                     <img
                         src = "/img/step-4.jpg"
                         alt=""
-                        class="how-it-works-image"
+                        class = "how-it-works-image size-adjust"
                     />
                     <div class="vc_empty_space">
                         <span class="vc_empty_space_inner" />

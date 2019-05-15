@@ -15,11 +15,11 @@ class App extends React.Component{
   return (
     <div className="d-flex">
     <div className="d-inline-block">
-      <Navigation/>
+      <Navigation isLogin={this.props.isLogin} current_name={this.props.current_user} user_img={this.props.user_img}/>
       </div>
       <div className="d-inline-block">
     
-        <MainContent isLogin={this.props.isLogin} current_user={this.props.current_user} LogOut={this.props.LogOut}/>
+        <MainContent isLogin={this.props.isLogin} current_user={this.props.current_user} LogOut={this.props.LogOut} user_img={this.props.user_img}/>
         
       </div>
       

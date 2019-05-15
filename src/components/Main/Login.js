@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LoginFB from "../Navigation/LoginFB"
 
 class Login extends Component {
   state = {
     email: "",
     password: "",
-    message:""
+    message:"",
+    isLoginFB:false
   };
 
   postUserLogin = data => {
@@ -25,7 +27,7 @@ class Login extends Component {
           if (this.state.isLogin) {
             sessionStorage.setItem("current_user", data.current_user);
             this.props.LogIn(true);
-            this.props.handleUserInfo(data.current_user);
+            this.props.handleUserName(data.current_user);
             console.log(data.current_user)
             this.props.history.push('/');
             }
@@ -51,6 +53,20 @@ class Login extends Component {
     this.postUserLogin({ email, password,message });
   };
   render() {
+    const responseFacebook = response => {
+      console.log(response);
+      if (response) {
+        this.setState({
+          
+          isLoginFB: true
+        }, () => console.log(response.picture.data.url));
+        this.props.LogIn(true)
+        this.props.handleUserName(response.name);
+        this.props.handleUserImg(response.picture.data.url)
+        this.props.history.push('/');
+      }
+     
+    };
     return (
       <div className="container">
         <div class="row justify-content-center form-white">
@@ -61,10 +77,10 @@ class Login extends Component {
                   <i class="fa fa-lock" /> Login:
                 </h3>
                 <div class="  text-center">
-                  <a href="a" class="btn btn-block btn-facebook">
-                    {" "}
-                    <i class="fab fa-facebook-f" />   Login via facebook
-                  </a>
+                  <LoginFB
+                  responseFacebook={responseFacebook}
+                        isLogin={this.state.isLogin}
+                  />
                   <a href="a" class="btn btn-block btn-google">
                     {" "}
                     <i className="fab fa-google-plus-g" />   Login via google

@@ -15,12 +15,24 @@ class MainContent extends Component{
 render(){
     return(
         <div>
-        <SubNav isLogin={this.props.isLogin} current_user={this.props.current_user} LogOut={this.props.LogOut}/>
+        < SubNav isLogin = {
+          this.props.isLogin
+        }
+        current_user = {
+          this.props.current_user
+        }
+        LogOut = {
+          this.props.LogOut
+        }
+        user_img = {
+          this.props.user_img
+        }
+        />
      
       <MainSearch/>
       <TutorDisplay/>
         <Steps />
-      
+      <Testimonials/>
       
       <Why/>
       

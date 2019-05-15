@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navigation.css";
-import Login from "./Login";
+import LoginFB from "./LoginFB";
 
 
 
@@ -41,14 +41,7 @@ class Navigation extends Component{
     }
     
 render(){
-    const responseFacebook = response => {
-        console.log(responseFacebook);
-        if (response) {
-            this.setState({ userName: response.name });
-
-            this.setState({ isLogin: true });
-        }
-    };
+  
     
     return(
         <div class="wrapper h-100">
@@ -56,17 +49,57 @@ render(){
     <nav id="sidebar" style={{display: `${this.state.isOpen ? 'block' : 'none'}`}} >
 
 
-                <div class="sidebar-header">
+                <div class="sidebar-header"></div>
                 
                     
-                </div>
+                
                 <ul className="components">
                 <div>
+
+                
+                    {this.props.isLogin?(
+                    <div>
+                <div class="user-pic">
+          <img class="login-ava" src={this.props.user_img}
+            alt="User picture"/>
+        </div>
+        <div class="user-info text-center">
+          < span class = "user-name" > 
+            <strong>{this.props.current_name}</strong>
+          </span>
+
+          <p class="user-status">
+            <i class="fa fa-circle text-success mr-1"></i>
+            <span>Online</span>
+          </p>
+        </div>
+        </div>
                     
-                    <Login
-                        responseFacebook={responseFacebook}
-                        isLogin={this.state.isLogin}
-                    />
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    ):(<div className="mb-1">
+                <div class="user-pic">
+          <img class="login-ava" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture"/>
+        </div>
+        <div class="user-info text-center">
+          <span class="user-name">
+            
+          </span>
+
+          <p class="user-status ">
+            <i class="fa fa-circle mr-1"></i>
+            <span>Offline</span>
+          </p>
+        </div>
+        </div>)}
+
                     
                 </div>
                 </ul>

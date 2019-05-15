@@ -13,7 +13,7 @@ class ExtraInfo extends Component {
             <h2 class="responsive-h5">Subjects</h2>
           </div>
         </div>
-        <div className="row">
+        < div className = "row" >
           <div className="section_custom_heading">
             <h2 className="subject-title-description">
               Here are a few of the subjects are the most popular.
@@ -26,10 +26,12 @@ class ExtraInfo extends Component {
         <div class="vc_empty_space">
           <span class="vc_empty_space_inner" />
         </div>
-        <div className="row">
-          <div className="col-4 text-center">
+       
+        < div className = "row subject-logo-display" >
+          
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
+               
                 <i class="img">
                   <img
                     className="subject-logo"
@@ -37,11 +39,21 @@ class ExtraInfo extends Component {
                     alt="logo"
                   />
                 </i>
-                <p className="subject-title">Ruby on Rails</p>
+                <p className="subject-title">RubyRails</p>
               </div>
             </div>
-          </div>
-          <div className="col-4">
+          
+           
+           <div class="wpb_wrapper ">
+              <div class="b_icon_list">
+                <i class="img">
+                  <img className="subject-logo" src="/img/logophp.png" alt="logo" />
+                </i>
+                <p className="subject-title">PHP</p>
+              </div>
+            </div>
+          
+          
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
@@ -54,9 +66,8 @@ class ExtraInfo extends Component {
                 <p className="subject-title">Swift</p>
               </div>
             </div>
-          </div>
-          <div className="col-4">
-            {" "}
+       
+            
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
@@ -69,13 +80,13 @@ class ExtraInfo extends Component {
                 <p className="subject-title">Python</p>
               </div>
             </div>
-          </div>
+        
         </div>
         <div class="vc_empty_space">
           <span class="vc_empty_space_inner" />
         </div>
-        <div className="row">
-          <div className="col-4">
+        < div className = "row subject-logo-display" >
+          
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
@@ -84,19 +95,31 @@ class ExtraInfo extends Component {
                 <p className="subject-title">JavaScript</p>
               </div>
             </div>
-          </div>
-          <div className="col-4">
-            <div class="wpb_wrapper ">
+        
+             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
-                  <img className="subject-logo" src="/img/php.png" alt="logo" />
+                  <img
+                    className="subject-logo"
+                    src = "/img/scala-logo.png"
+                    alt="logo"
+                  />
                 </i>
-                <p className="subject-title">PHP</p>
+                <p className="subject-title">Scala</p>
               </div>
             </div>
-          </div>
-          <div className="col-4">
-            {" "}
+<div class="wpb_wrapper ">
+              <div class="b_icon_list">
+                <i class="img">
+                  <img
+                    className="subject-logo"
+                    src="img/mysql.png"
+                    alt="logo"
+                  />
+                </i>
+                <p className="subject-title">MySQL</p>
+              </div>
+            </div>
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
@@ -109,13 +132,14 @@ class ExtraInfo extends Component {
                 <p className="subject-title">React</p>
               </div>
             </div>
+            
           </div>
-        </div>
+        
         <div class="vc_empty_space">
           <span class="vc_empty_space_inner" />
         </div>
-        <div className="row">
-          <div className="col-4">
+        < div className = "row subject-logo-display" >
+          
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
@@ -124,8 +148,7 @@ class ExtraInfo extends Component {
                 <p className="subject-title">HTML5</p>
               </div>
             </div>
-          </div>
-          <div className="col-4">
+          
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
@@ -138,23 +161,35 @@ class ExtraInfo extends Component {
                 <p className="subject-title">Jquery</p>
               </div>
             </div>
-          </div>
-          <div className="col-4">
-            {" "}
+          
             <div class="wpb_wrapper ">
               <div class="b_icon_list">
                 <i class="img">
                   <img
                     className="subject-logo"
-                    src="img/mysql.png"
+                    src="img/csharp.png"
                     alt="logo"
                   />
                 </i>
-                <p className="subject-title">MySQL</p>
+                <p className="subject-title">C#</p>
               </div>
             </div>
-          </div>
+            
+           <div class="wpb_wrapper ">
+              <div class="b_icon_list">
+               
+                <i class="img">
+                  <img
+                    className="subject-logo"
+                    src = "/img/cplus.png"
+                    alt="logo"
+                  />
+                </i>
+                <p className="subject-title">C++</p>
+              </div>
+            </div>
         </div>
+       
         <div class="vc_empty_space">
           <span class="vc_empty_space_inner" />
         </div>

@@ -2,35 +2,42 @@ import React from "react";
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import GoogleLogin from 'react-google-login';
 
-class Login extends React.Component {
-    
+class LoginFB extends React.Component {
 
     render() {
-        // const style = this.props.isLogin ? {} : { display: "none" };
+        if(!this.props.isLogin){   
         return (
-            <div id="myForm text-center">
-                Please Login
-                {!this.props.isLogin && (
+
+            <div className="btn btn-block btn-facebook">
+                
+                
                     <FacebookLogin
                         className="form-popup"
                         appId="2054035894900700" //APP ID NOT CREATED YET
                         fields="name,email,picture"
-                    
                         callback={this.props.responseFacebook}
                         render={renderProps => (
-                            <i class="pl-3 fab fa-2x fa-facebook  login-icon" onClick={renderProps.onClick}></i>
+                            <i class="fab fa-facebook-f" onClick={renderProps.onClick}><span className="mr-3"></span><span className="font-extra">LOGIN VIA FACEBOOK</span></i>
                         )}
-                        disabled={!this.props.isLogin}
+                      
                     />
-                )}
+             
 
                 
             </div>
+
+
+           
         );
+    }
+    else{
+        return(
+        <div>Hello</div>);
+    }
     }
 }
 
-export default Login;
+export default LoginFB;
 
 
 // {

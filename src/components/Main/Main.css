@@ -187,7 +187,7 @@
 .service-3 .service-box .iconset {
   float: left;
   text-align: center;
-  width: 14%;
+  width: 20%;
 }
 .service-3 .service-box .iconset i {
   color: #000;
@@ -195,7 +195,7 @@
 }
 .service-3 .service-box .y-us-content {
   float: left;
-  width: 50%;
+  width: 78%;
 }
 service-3 .service-box .y-us-content h4 {
   color: #3a3a3a;
@@ -369,7 +369,7 @@ service-3 .service-box .y-us-content h4 {
 }
 
 .is-black {
- background-color:rgb(0, 0, 0);
+ background-color:rgba(0, 0, 0, 0.835);
 
   position: fixed;
   top: 0;
@@ -498,11 +498,11 @@ form.main-search {
   margin: 0 auto 30px;
 }
 .featured-tutor .featured-tutor-profile-picture {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 230px;
   margin: 0 auto;
   display: block;
-  border-radius: 100px;
+  
   margin-bottom: 20px;
 }
 
@@ -621,7 +621,7 @@ form.main-search {
 }
 
 .how-it-works-image{
-    width: 250px;
+    width: 160px;
 }
 
 .how-it-works-step-graphic-left{
@@ -823,9 +823,9 @@ color:#f6b603!important;
 .extra-padding{
   bottom:-55px !important;
 }
-html, body {
+/* html, body {
    overflow-x: hidden;
-}
+} */
 
 .react-autosuggest__container {
   position: relative;
@@ -903,4 +903,16 @@ html, body {
 .ava-on-nav{
 width:6%;
 
+}
+.size-adjust{
+width:230px !important;
+}
+.subject-logo-display{
+  justify-content: space-around;
+  margin-left:10px;
+}
+.font-extra{
+  font-family: Poppins,
+  sans-serif;
+  font-size:14px;
 }

@@ -20,7 +20,6 @@ render(){
       <MainSearch/>
       <TutorDisplay/>
         <Steps />
-        <Testimonials/>
       
       
       <Why/>

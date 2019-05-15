@@ -10,12 +10,13 @@ class SearchForm extends Component {
     super();
 
     this.state = {
-      SubjectList: []
-     
+      SubjectList: [],
+      LocationList: [],
+      CityList: []
     };
   }
   getSubjectList = async () => {
-    let response = await fetch("http://localhost:5000/subjects");
+    let response = await fetch("http://localhost:5000/subject");
     let data = await response.json();
     this.setState(
       {
@@ -25,13 +26,25 @@ class SearchForm extends Component {
     );
   };
 
+  getLocationList = async () => {
+    let response = await fetch("http://localhost:5000/location");
+    let data = await response.json();
+    this.setState(
+      {
+        LocationList: data
+      },
+      () => console.log(this.state.LocationList)
+    );
+  };
+
   componentDidMount() {
     this.getSubjectList();
+    this.getLocationList();
   }
 
-  
-
   render() {
+    let SubjectListSelection = this.state.SubjectList.map(subject => { return { key:subject.id, value: subject.id, text:subject.name} });
+    let LocationListSelection = this.state.LocationList.map(item => { return { key: item.id, value: item.id, text: item.name } });
 
     const learningMethodOptions = [
       { key: "1", value: "1", text: "Private" },
@@ -43,11 +56,11 @@ class SearchForm extends Component {
       { key: "2", value: "2", text: "Hanoi" },
       { key: "3", value: "3", text: "Da Nang" }
     ];
-    
+
     const locationOptions = [
       { key: "1", value: "1", text: "Quan 1" },
       { key: "2", value: "2", text: "Quan 2" },
-      { key: "3", value: "3", text: "Quan 3" },
+      { key: "3", value: "3", text: "Quan 3" }
     ];
 
     return (
@@ -65,7 +78,7 @@ class SearchForm extends Component {
                 fluid
                 search
                 selection
-                options={this.state.SubjectList}
+                options={SubjectListSelection}
               />
             </div>
             <div class="three wide field">
@@ -93,12 +106,15 @@ class SearchForm extends Component {
                 fluid
                 search
                 selection
-                options={locationOptions}
+                options={LocationListSelection}
               />
             </div>
 
             <div className="two wide field">
-              <button type="submit" class="btn btn-default search-btn btn-block">
+              <button
+                type="submit"
+                class="btn btn-default search-btn btn-block"
+              >
                 Search
               </button>
             </div>

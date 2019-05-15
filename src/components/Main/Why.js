@@ -52,6 +52,15 @@ class Why extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="y-us-content">
+                            <div class="service-3">
+
+                               
                                 <div class="service-box">
                                     <div class="clearfix">
                                         <div class="iconset">
@@ -66,7 +75,8 @@ class Why extends Component {
                             </div>
                         </div>
                     </div>
-
+</div>
+<div className="row">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="y-us-contentbox">
                             <div class="service-3">
@@ -82,6 +92,15 @@ class Why extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="y-us-contentbox">
+                            <div class="service-3">
+
+                                
                                 <div class="service-box">
                                     <div class="clearfix">
                                         <div class="iconset">

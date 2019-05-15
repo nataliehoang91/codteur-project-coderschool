@@ -60,7 +60,7 @@ class TutorDisplay extends Component {
                     style={{ cursor: "pointer" }}
                   >
                     <img
-                      class="featured-tutor-profile-picture mt-4"
+                      class="featured-tutor-profile-picture"
                       src="https://nyumba.co.zm/wp-content/uploads/2016/03/Debra-Rose_avatar_1434742307-150x150.jpg"
                       alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                       title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."

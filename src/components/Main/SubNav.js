@@ -11,10 +11,11 @@ class SubNav extends Component{
     }
 
     handleScroll=()=> {
+        console.log(window.scrollY)
         this.setState({ scroll: window.scrollY });
     }
+    
     componentDidMount() {
-      
         window.addEventListener('scroll', this.handleScroll);
     }
 
@@ -30,15 +31,19 @@ class SubNav extends Component{
                         
                         </div>
                     <div>
+                    {this.props.current_user ?(
+                        <span className="text-white"><img className="ava-on-nav mr-2" src="/img/logo.png" alt="ava"/>{this.props.current_user}</span>):
+                        (<span></span>)}
+                        
                     {!this.props.isLogin ?(
                             <a href={"/login/"}><button class="btn btn-become-tutor my-2 my-sm-0" type="submit">Login</button></a>) : (<button class="btn btn-become-tutor my-2 my-sm-0" type="submit" onClick={this.props.LogOut}>Logout</button >)}
                         <button class="btn btn-become-tutor my-2 my-sm-0" type="submit">Become a Tutor</button>
                         
-
+                        
                     </div>
                     </div>
             
-</div>
+            </div>
         );
     }
 }

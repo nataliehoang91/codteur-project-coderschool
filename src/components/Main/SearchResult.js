@@ -21,22 +21,50 @@ class SearchResult extends Component{
       </div>
       <div className="d-inline-block ">
    <SubNav/>
+   <div className="row">
+   <div className="container">
+   <h1>LIST OF TUTORS MATCHED YOUR REQUEST</h1>
         {state.tutors.map(item=>{
               return(
-            <div>
-            <p>{item.email}</p>
+            <div className="bg-result-page">
+             
+                  <section class="testimonial" aria-label="testimonal">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <img
+                          class="img-responsive-a"
+                          src=""
+                          alt="hh"
+                         
+                        />
+                      </div>
+                      <div class="col-md-7">
+                        <div aria-label="testimonial comment">
+                        <p>{item.name}</p>
+                        <p>{item.phonenumber}</p>
+                        <p>{item.subject}</p>
+                          {item.email}
+                          <cite aria-label="author of testimonial">
+                          
+                          </cite>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+           
             
             
             
-            </div>
+            
             
               )
         
         
         })}
       </div>
-      
-       
+      </div>
+       </div>
     </div>
 
 

@@ -782,6 +782,13 @@ color:#f6b603!important;
         width: 235px;
         object-fit: cover;
 }
+.img-responsive-a {
+ border: 1px solid #ddd;
+ margin: auto auto 15px;
+ height: 150px;
+ width: 235px;
+ object-fit: cover;
+}
 
 .testimonial blockquote {
     font-family: "source sans pro";
@@ -942,4 +949,8 @@ width:230px !important;
 
 .bg-results{
   background-color: black;
+}
+.bg-result-page{
+  
+  min-height:1500px;
 }

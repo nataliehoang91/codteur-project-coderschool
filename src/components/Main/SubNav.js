@@ -36,7 +36,7 @@ class SubNav extends Component{
                         (<span></span>)}
                         
                     {!this.props.isLogin ?(
-                            <a href={"/login/"}><button class="btn btn-become-tutor my-2 my-sm-0" type="submit">Login</button></a>) : (<button class="btn btn-become-tutor my-2 my-sm-0" type="submit" onClick={this.props.LogOut}>Logout</button >)}
+                            <a href={"/login/"}><button class="btn btn-become-login my-2 my-sm-0" type="submit">Login</button></a>) : (<button class="btn btn-become-tutor my-2 my-sm-0" type="submit" onClick={this.props.LogOut}>Logout</button >)}
                         <button class="btn btn-become-tutor my-2 my-sm-0" type="submit">Become a Tutor</button>
                         
                         

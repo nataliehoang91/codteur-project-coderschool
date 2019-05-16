@@ -1,6 +1,7 @@
 footer.nb-footer {
 background: #222;
-border-top: 1px solid #f7c73f; }
+border-top: 1px solid #ffbd27;
+}
 
 footer{
     font-family: 'Poppins',
@@ -20,19 +21,20 @@ height: 45px;
 line-height: 45px;
 border-radius: 50%;
 font-size: 16px;
-color: #b78c33;
+color: #ffbd27;
 border: 1px solid rgba(255, 255, 255, 0.3); }
 footer.nb-footer .about .social-media ul li a:hover {
-background: #b78c33;
+background:#ffbd27;
 color: #fff;
-border-color: #b78c33; }
+border-color: #ffcc01;
+}
 footer.nb-footer .footer-info-single {
 margin-top: 30px; }
 footer.nb-footer .footer-info-single .title {
 color: #aaa;
 text-transform: uppercase;
 font-size: 16px;
-border-left: 2px solid #f7c73f;
+border-left: 2px solid #ffcc01;
 padding-left: 5px; }
 footer.nb-footer .footer-info-single ul li a {
 display: block;

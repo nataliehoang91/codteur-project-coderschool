@@ -160,7 +160,7 @@ render(){
             <div id="content">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid" >
-                        <button type="button" id="sidebarCollapse" class="btn btn-info" onClick={this.closeNavbar}>
+                        <button type="button" id="sidebarCollapse" class="btn btn-side-nav" onClick={this.closeNavbar}>
                             
                             <span>{this.state.isOpen ? 'X' : <i class="fas fa-align-left"></i>}</span>
                         </button>

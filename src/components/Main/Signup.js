@@ -27,7 +27,7 @@ class Signup extends Component {
                 }
                 else {
                     
-                    this.setState({ message: "UnSuccessful", classMessage:'alert-danger' })
+                    this.setState({ message: "Unsuccessful", classMessage:'alert-danger' })
                 }
             }
             )

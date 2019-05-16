@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import {
+  withRouter
+} from 'react-router-dom';
 import { Dropdown } from "semantic-ui-react";
 
 // Use your imagination to render suggestions.
@@ -15,7 +17,9 @@ class SearchForm extends Component {
       CityList: [],
       selectedSubject:"",
       selectedLocation: "",
-      tutors: []
+      tutors: [],
+      responseMessage:"",
+      classMessage: ""
     };
   }
   getSubjectList = async () => {
@@ -39,16 +43,25 @@ class SearchForm extends Component {
       () => console.log(this.state.LocationList)
     );
   };
-handleOnSeclect = (e,data) =>{
-  
-  
+handleOnSeclectLocation = (e,data) =>{
   
   this.setState(
     {
+      selectedLocation: data.value
+    },
+    () => {
+      console.log(this.state.selectedLocation);
+    }
+  );
+}
+
+handleOnSeclectSubject = (e, data) => {
+
+  this.setState({
       selectedSubject: data.value
     },
     () => {
-      console.log(this.state.selectedValue);
+      console.log(this.state.selectedSubject);
     }
   );
 }
@@ -57,20 +70,38 @@ handleOnSeclect = (e,data) =>{
     this.getLocationList();
   }
 
-  handleSubmit = async(e) => {
+   handleSubmitSearch = async(e) => {
     e.preventDefault();
-    let resp = await fetch(`http://localhost:5000/tutors?location=${this.state.selectedSubject}`);
+    let resp = await fetch(`http://localhost:5000/tutors?location=${this.state.selectedLocation}&subject=${this.state.selectedSubject}`);
+    console.log(resp)
     let result = await resp.json();
-    console.log(result)
+     if (result.success == false) {
+       this.setState({
+
+         responseMessage: "Not Found",
+         classMessage: 'alert-danger'
+
+       }, () => console.log(this.state.responseMessage))
+     }
+    else if (result[0].success == true) {
+    
     this.setState({
       tutors: result
-    },() => console.log(this.state.tutors))
-      
-    // Make a fetch request.
-    // get the data
-    // this.setState( data you receive )
+    },() => console.log("oo",this.state.tutors))
+    this.props.history.push({
+      pathname: '/results',
+      state: {
+        tutors: this.state.tutors
+      }
+    });
+  }
+    
+    
   }
   render() {
+    console.log(this.props)
+    const color = `alert ${this.state.classMessage}`;
+
     let SubjectListSelection = this.state.SubjectList.map(subject => { return { key:subject.id, value: subject.id, text:subject.name} });
     let LocationListSelection = this.state.LocationList.map(item => { return { key: item.id, value: item.id, text: item.name } });
 
@@ -89,6 +120,9 @@ handleOnSeclect = (e,data) =>{
     
 
     return (
+     
+      
+    
       <div class="search-bar-home horizontal">
         <form
           name="hemispherebundle_offer_search"
@@ -105,7 +139,8 @@ handleOnSeclect = (e,data) =>{
                 search
                 selection
                 options={SubjectListSelection}
-                onChange={this.handleOnSeclect}
+                onChange={this.handleOnSeclectSubject}
+                
               />
             </div>
             <div class="three wide field">
@@ -134,31 +169,54 @@ handleOnSeclect = (e,data) =>{
                 search
                 selection
                 options={LocationListSelection}
+                onChange = {
+                  this.handleOnSeclectLocation
+                }
                 
               />
             </div>
 
             <div className="two wide field">
-              <a href={"/login/"}>
+              
                 <button
                   type="submit"
-                  class="btn btn-default search-btn btn-block"
+                  className="btn btn-default search-btn btn-block"
+                  onClick={this.handleSubmitSearch}
                 >
                   Search
                 </button>
-              </a>
+              
             </div>
           </div>
         </form>
         <div>
-          { this.state.tutors.map (t => <li> {t.name} </li>)}
+          
         </div>
+        {
+        this.state.responseMessage ? (
+                    <div className={color}>
+                        <button type="button" class="close " data-dismiss="alert" aria-hidden="true">
+                            ×</button>
+                        <span class="glyphicon glyphicon-ok"></span>
+
+                        {this.state.responseMessage}
+                    </div>
+
+            ):
+                
+                    
+           (<span></span>)
+            
+            
+            
+            }
       </div>
+    
     );
   }
 }
 
-export default SearchForm;
+export default withRouter(SearchForm);
 
 // <div class="panel with-nav-tabs panel-default">
 //     <div class="panel-heading">

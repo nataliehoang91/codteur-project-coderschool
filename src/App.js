@@ -19,7 +19,17 @@ class App extends React.Component{
       </div>
       <div className="d-inline-block">
     
-        <MainContent isLogin={this.props.isLogin} current_user={this.props.current_user} LogOut={this.props.LogOut} user_img={this.props.user_img}/>
+        <MainContent isLogin={this.props.isLogin} current_user={this.props.current_user} LogOut={this.props.LogOut} user_img={this.props.user_img}
+            CityList= {this.props.CityList}
+              
+        
+        
+        
+        
+        
+        
+        
+        />
         
       </div>
       

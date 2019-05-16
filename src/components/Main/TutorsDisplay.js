@@ -52,8 +52,8 @@ class TutorDisplay extends Component {
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div className="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
+              <div className="row justify-content-center">
+                
                   <div
                     class="featured-tutor text-center "
                     data-wide-target=""
@@ -81,8 +81,8 @@ class TutorDisplay extends Component {
                       <span class="fa fa-map-marker" /> HCMC
                     </div>
                   </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                
+               
                   <div
                     class="featured-tutor text-center"
                     data-wide-target=""
@@ -110,8 +110,8 @@ class TutorDisplay extends Component {
                       <span class="fa fa-map-marker" /> Ha Noi
                     </div>
                   </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                
+                
                   <div
                     class="featured-tutor text-center "
                     data-wide-target=""
@@ -139,8 +139,7 @@ class TutorDisplay extends Component {
                       <span class="fa fa-map-marker" /> HCMC
                     </div>
                   </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                
                   <div
                     class="featured-tutor text-center "
                     data-wide-target=""
@@ -168,7 +167,7 @@ class TutorDisplay extends Component {
                       <span class="fa fa-map-marker" /> Ha Noi
                     </div>
                   </div>
-                </div>
+                
               </div>
             </div>
             <div class="carousel-item">

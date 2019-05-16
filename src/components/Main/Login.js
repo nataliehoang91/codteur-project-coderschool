@@ -56,6 +56,7 @@ class Login extends Component {
     const responseFacebook = response => {
       console.log(response);
       if (response) {
+        
         this.setState({
           
           isLoginFB: true

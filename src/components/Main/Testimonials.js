@@ -25,9 +25,7 @@ class Testimonials extends Component {
         <div class="vc_empty_space">
           <span class="vc_empty_space_inner" />
         </div>
-        <div class="vc_empty_space">
-          <span class="vc_empty_space_inner" />
-        </div>
+        
         <div
           id="test"
           class="carousel slide"
@@ -50,7 +48,7 @@ class Testimonials extends Component {
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="row">
+              <div class="row margin-testimonial">
                 <div class="col-md-6">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">

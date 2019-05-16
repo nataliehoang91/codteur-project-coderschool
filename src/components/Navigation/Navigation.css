@@ -77,8 +77,10 @@ a, a:hover, a:focus {
     display: block;
 }
 #sidebar ul li a:hover {
-    color: rgb(13, 209, 216);
-    background: rgb(117, 221, 20);
+    color: black;
+    background:#fff4d4;
+    font-size:17px;
+    transition: 0.5ms;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -98,7 +100,7 @@ ul ul a {
     margin-left: -16px!important;
 }
 .search-inside{
-    width: 100%;
+    width: 115%;
   text-align: center;
   display: flex;
 }
@@ -133,10 +135,10 @@ ul ul a {
     padding-left:5%;
     padding-top: 3%;
 }
-.btn-info {
+.btn-side-nav {
         color:black;
-    background-color: #f8c73f !important;
-    border-color:none !important;
+    background-color: #ffcc01 !important;
+    
 }
 .login-icon{
 

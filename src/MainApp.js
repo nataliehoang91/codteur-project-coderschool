@@ -29,6 +29,7 @@ class MainApp extends Component {
             isLogin: false,
             current_user: ""
         })
+        localStorage.clear()
     }
 
     LogIn=(isLogin)=>{
@@ -56,12 +57,12 @@ class MainApp extends Component {
                 <div>
                 <Route path="/login" exact render={(props) => <Login {...props} {...childProps} />} />
                 <Route exact path="/" render={(props) => <App {...props} {...childProps} />} />
-                <Route path="/signup" render={(props) => <Signup {...props} {...childProps} />} />
-                <Route path="/results" render={(props) => <SearchResult {...props} {...childProps} />} />
+            <Route path="/signup" render={(props) => <Signup {...props} {...childProps} />} />
+            <Route path="/results" render={(props) => <SearchResult {...props} {...childProps} />} />
 
-                </div>
-        );
-    
+            </div>
+    );
+
 }}
 
 export default MainApp;

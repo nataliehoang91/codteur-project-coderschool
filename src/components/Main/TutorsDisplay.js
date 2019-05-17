@@ -32,7 +32,7 @@ class TutorDisplay extends Component {
         </div>
         <div
           id="carouselExampleIndicators"
-          class="carousel slide"
+          class="carousel slide tutor-display-margin"
           
         >
           <ol class="carousel-indicators">

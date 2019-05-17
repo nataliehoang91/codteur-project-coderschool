@@ -145,7 +145,7 @@ handleOnSeclectSubject = (e, data) => {
             </div>
             <div class="three wide field">
               <Dropdown
-                placeholder="Select Method"
+                placeholder="Method"
                 fluid
                 search
                 selection

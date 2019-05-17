@@ -25,7 +25,7 @@ class Login extends Component {
       .then(data =>
         this.setState({ isLogin: data.isLogin }, () => {
           if (this.state.isLogin) {
-            sessionStorage.setItem("current_user", data.current_user);
+            localStorage.setItem("username", data.current_user);
             this.props.LogIn(true);
             this.props.handleUserName(data.current_user);
             console.log(data.current_user)
@@ -61,6 +61,8 @@ class Login extends Component {
           
           isLoginFB: true
         }, () => console.log(response.picture.data.url));
+        localStorage.setItem("username", response.name);
+        localStorage.setItem("profilepic", response.picture.data.url);
         this.props.LogIn(true)
         this.props.handleUserName(response.name);
         this.props.handleUserImg(response.picture.data.url)

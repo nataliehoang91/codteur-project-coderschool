@@ -11,7 +11,7 @@ class Footer extends Component {
                         <div class="row">
                             
 
-                                <div class="col-lg-3 col-md-3 col-sm-6 pl-5">
+                                < div class = "col-lg-3 col-md-3 col-sm-6 padding-footer" >
                                     <div class="footer-info-single">
                                         <h2 class="title">Help Center</h2>
                                         <ul class="list-unstyled">
@@ -23,7 +23,7 @@ class Footer extends Component {
                                     </div>
                                 </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="col-lg-3 col-md-3 col-sm-6 pl-5">
                                     <div class="footer-info-single">
                                         <h2 class="title">Customer information</h2>
                                         <ul class="list-unstyled">
@@ -36,7 +36,7 @@ class Footer extends Component {
                                     </div>
                                 </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="col-lg-3 col-md-3 col-sm-6 pl-5">
                                     <div class="footer-info-single">
                                         <h2 class="title">Security & privacy</h2>
                                         <ul class="list-unstyled">

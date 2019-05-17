@@ -22,7 +22,7 @@ class Signup extends Component {
             .then(data => {
                 console.log(data)
                 if (data.success) {
-                    sessionStorage.setItem('current_user', data.username);
+                   
                     this.setState({ message: "Successful", classMessage: 'alert-success'})
                 }
                 else {

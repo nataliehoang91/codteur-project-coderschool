@@ -41,7 +41,8 @@ class Navigation extends Component{
     }
     
 render(){
-  
+  const username = localStorage.getItem('username')
+  const profilepic = localStorage.getItem('profilepic')
     
     return(
         <div class="wrapper h-100">
@@ -57,15 +58,15 @@ render(){
                 <div>
 
                 
-                    {this.props.isLogin?(
+                    {username?(
                     <div>
                 <div class="user-pic">
-          <img class="login-ava" src={this.props.user_img}
+          <img class="login-ava" src={profilepic}
             alt="User picture"/>
         </div>
         <div class="user-info text-center">
           < span class = "user-name" > 
-            <strong>{this.props.current_name}</strong>
+            <strong>{username}</strong>
           </span>
 
           <p class="user-status">
@@ -76,13 +77,7 @@ render(){
         </div>
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+
                     ):(<div className="mb-1">
                 <div class="user-pic">
           <img class="login-ava" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"

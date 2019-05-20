@@ -596,7 +596,7 @@ form.main-search {
   font-style: normal;
 }
 .steps-bg{
-    background-color:rgb(255, 255, 255);
+    background-color:antiquewhite;
 }
 /* .how-it-works-step-content-left{
     border-right: .2rem solid #00bfc2;
@@ -604,7 +604,7 @@ form.main-search {
        
 } */
 .how-it-works-step-graphic-right {
-    border-left: .1rem solid #050505; 
+    border-left: .1rem solid #00bfc2;
     padding-left: 2rem;
     text-align:left;
    
@@ -614,27 +614,32 @@ form.main-search {
     content: "";
     width: 9px;
     height: 9px;
-    background-color: #ffffff;
+    background-color: #5a5959;
     border-radius: 9px;
     box-shadow: 0 0 2px 8px #ffdb3c;
     margin-left: -35px;
    
 }
-    
+.how-it-works-step-graphic-left-last {
+ 
+ padding-right: 2.2rem;
+ text-align:right;
+
+}
 
 
 .how-it-works-step-left{
-    border-right: .1rem solid #000000; 
+    border-right: .1rem solid #00bfc2;
     padding-right: 2rem;
      text-align:right;
 }
 
 .how-it-works-image{
-    width: 160px;
+    width: 300px;
 }
 
 .how-it-works-step-graphic-left{
-    border-right: .1rem solid #000000; 
+    border-right: .1rem solid #00bfc2;
     padding-right: 2rem;
     text-align:right;
 }
@@ -644,16 +649,34 @@ position: absolute;
     content: "";
     width: 9px;
     height: 9px;
-    background-color: #ffffff;
+    background-color: #5a5959;
     border-radius: 9px;
     box-shadow: 0 0 2px 8px #ffdb3c;
     margin-left: -35px;
 
 }
+
+.how-it-works-step-right-last::before {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #5a5959;
+  border-radius: 9px;
+  box-shadow: 0 0 2px 8px #ffdb3c;
+  margin-left: -35px;
+
+}
 .how-it-works-step-right{
-    border-left: .1rem solid #000000; 
+    border-left: .1rem solid #00bfc2;
     padding-left: 2rem;
     text-align:left;
+}
+
+.how-it-works-step-right-last {
+  
+  padding-left: 2rem;
+  text-align: left;
 }
 .how-it-works-text{
     color:black;
@@ -766,7 +789,7 @@ color:#f6b603!important;
 	border-style: solid;
 	border-width:5px 1px 1px;
 	margin:15px 0;
-  border-color: #f7c73f rgb(15, 15, 15) rgb(29, 29, 29);
+  border-color: #00bfc2 rgb(15, 15, 15) rgb(29, 29, 29);
 }
 
 .testimonial:hover {
@@ -936,9 +959,7 @@ color:#f6b603!important;
 width:6%;
 
 }
-.size-adjust{
-width:230px !important;
-}
+
 .subject-logo-display{
   justify-content: space-around;
   margin-left:10px;
@@ -1029,4 +1050,9 @@ width:230px !important;
   background: #e6b000;
   color: #1b1b1b !important;
   font-weight: bold;
+}
+
+.titlecolor{
+  color:rgb(57, 0, 144);
+  font-size: 28px;
 }

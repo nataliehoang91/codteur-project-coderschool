@@ -166,7 +166,7 @@ class ExtraInfo extends Component {
               <div class="b_icon_list">
                 <i class="img">
                   <img
-                    className="subject-logo"
+                    className="subject-logo mr-3"
                     src="img/csharp.png"
                     alt="logo"
                   />

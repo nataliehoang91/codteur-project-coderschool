@@ -61,7 +61,7 @@ class TutorDisplay extends Component {
                   >
                     <img
                       class="featured-tutor-profile-picture"
-                      src="https://nyumba.co.zm/wp-content/uploads/2016/03/Debra-Rose_avatar_1434742307-150x150.jpg"
+                      src="/img/sample_tutor1.png"
                       alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                       title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                     />
@@ -90,7 +90,7 @@ class TutorDisplay extends Component {
                   >
                     <img
                       class="featured-tutor-profile-picture"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/220px-Elon_Musk_Royal_Society.jpg"
+                      src = "/img/sample_tutor2.png"
                       alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                       title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                     />
@@ -119,7 +119,7 @@ class TutorDisplay extends Component {
                   >
                     <img
                       class="featured-tutor-profile-picture"
-                      src="https://lh3.googleusercontent.com/BKBnEG9M9fHvRM-Bw4Oi7fgedpSVD9c0EmFvItCiQg4gQ8C-lsDaq59r3ECd1-tMSrx_3iHCWDqCYQdNPrnlUDnWQ2o0Zm0=s750"
+                      src="img/sample_tutor3.png"
                       alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                       title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                     />
@@ -147,7 +147,7 @@ class TutorDisplay extends Component {
                   >
                     <img
                       class="featured-tutor-profile-picture"
-                      src="https://i0.wp.com/fifthperson.com/wp-content/uploads/2015/04/warren-buffett.jpg?resize=620%2C388&ssl=1"
+                      src="/img/sample_tutor4.png"
                       alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                       title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
                     />

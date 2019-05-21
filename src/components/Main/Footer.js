@@ -51,7 +51,7 @@ class Footer extends Component {
                             <div class="col-lg-3 col-md-3 col-sm-6">
                                     <div class="footer-info-single">
                                         <h2 class="title">Payment</h2>
-                                        <p>jkhkjhjk</p>
+                                        <p>Terms & Conditions</p>
 
                                     </div>
                                 </div>

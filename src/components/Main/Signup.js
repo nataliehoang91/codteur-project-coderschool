@@ -71,8 +71,7 @@ class Signup extends Component {
             
             }
               
-                
-
+    
 
 
 

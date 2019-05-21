@@ -110,6 +110,7 @@ class SearchResult extends Component{
       </div>
        </div>
     </div>
+   <a href="/" className="text-right">Back to homepage</a>
 </div>
 
 

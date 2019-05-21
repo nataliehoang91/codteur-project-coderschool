@@ -17,13 +17,14 @@ class SearchForm extends Component {
       CityList: [],
       selectedSubject:"",
       selectedLocation: "",
+      selectedCity: "",
       tutors: [],
       responseMessage:"",
       classMessage: ""
     };
   }
   getSubjectList = async () => {
-    let response = await fetch("http://localhost:5000/subject");
+    let response = await fetch("https://backend-codteur-project.herokuapp.com/subject");
     let data = await response.json();
     this.setState(
       {
@@ -32,9 +33,19 @@ class SearchForm extends Component {
       () => console.log(this.state.SubjectList)
     );
   };
+  getCityList = async () => {
+    let response = await fetch("https://backend-codteur-project.herokuapp.com/city");
+    let data = await response.json();
+    this.setState(
+      {
+        CityList: data
+      }, () => 
+        console.log(this.state.CityList)
+    );
+  };
 
   getLocationList = async () => {
-    let response = await fetch("http://localhost:5000/location");
+    let response = await fetch("https://backend-codteur-project.herokuapp.com/location");
     let data = await response.json();
     this.setState(
       {
@@ -44,7 +55,7 @@ class SearchForm extends Component {
     );
   };
 handleOnSeclectLocation = (e,data) =>{
-  
+  console.log(data)
   this.setState(
     {
       selectedLocation: data.value
@@ -54,6 +65,18 @@ handleOnSeclectLocation = (e,data) =>{
     }
   );
 }
+
+  handleOnSeclectCity = (e, data) => {
+    console.log(data)
+    this.setState(
+      {
+        selectedCity: data.value
+      },
+      () => {
+        console.log(this.state.selectedCity);
+      }
+    );
+  }
 
 handleOnSeclectSubject = (e, data) => {
 
@@ -68,11 +91,12 @@ handleOnSeclectSubject = (e, data) => {
   componentDidMount() {
     this.getSubjectList();
     this.getLocationList();
+    this.getCityList();
   }
 
    handleSubmitSearch = async(e) => {
     e.preventDefault();
-    let resp = await fetch(`http://localhost:5000/tutors?location=${this.state.selectedLocation}&subject=${this.state.selectedSubject}`);
+     let resp = await fetch(`https://backend-codteur-project.herokuapp.com/tutors?location=${this.state.selectedLocation}&subject=${this.state.selectedSubject}`);
     console.log(resp)
     let result = await resp.json();
      if (result.success == false) {
@@ -83,7 +107,7 @@ handleOnSeclectSubject = (e, data) => {
 
        }, () => console.log(this.state.responseMessage))
      }
-    else if (result[0].success == true) {
+    else if (result[0].success === true) {
     
     this.setState({
       tutors: result
@@ -103,20 +127,19 @@ handleOnSeclectSubject = (e, data) => {
     const color = `alert ${this.state.classMessage}`;
 
     let SubjectListSelection = this.state.SubjectList.map(subject => { return { key:subject.id, value: subject.id, text:subject.name} });
-    let LocationListSelection = this.state.LocationList.map(item => { return { key: item.id, value: item.id, text: item.name } });
 
+    
+    
+    let CityListSelection = this.state.CityList.map(item => { return { key: item.id, value: item.id, text: item.name } });
+    
+    let LocationListSelection = this.state.LocationList.filter(item=>item.city_id===this.state.selectedCity).map(item => { return { key: item.id, value: item.id, text: item.name } });
+    
     const learningMethodOptions = [
       { key: "1", value: "1", text: "Private" },
       { key: "2", value: "2", text: "Group" }
     ];
 
-    const cityOptions = [
-      { key: "1", value: "1", text: "Ho Chi Minh"},
-      {
-        key: "2", value: "2", text: "Hanoi"},
-      { key: "3", value: "3", text: "Da Nang"}
-    ];
-
+    
     
 
     return (
@@ -158,13 +181,14 @@ handleOnSeclectSubject = (e, data) => {
                 fluid
                 search
                 selection
-                options={cityOptions}
+                options={CityListSelection}
+                onChange={this.handleOnSeclectCity}
               />
             </div>
 
             <div class="three wide field">
               <Dropdown
-                placeholder="Select City"
+                placeholder="Select District"
                 fluid
                 search
                 selection

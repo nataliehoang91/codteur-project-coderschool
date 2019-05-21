@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {
+    withRouter
+} from 'react-router';
 
 const name = localStorage.getItem('current_user')
 
@@ -26,12 +29,14 @@ class SubNav extends Component{
     
       const username = localStorage.getItem('username')
        const profilepic = localStorage.getItem('profilepic')
+       let url=this.props.match.url;
+
         console.log(name)
         return(
       
-            <div id="navbartoggle" className={this.state.scroll > 400 ? "is-black nav-bg" : "nav-bg"}>
+            <div id="navbartoggle" className={(this.state.scroll > 400 ) || (url==='/results')? "is-black nav-bg" : "nav-bg"}>
                 <div class=" d-flex justify-content-between py-2">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-logo">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-logo"> 
                         <img class="mainlogo img-responsive ml-3" src="/img/logonew.png" alt="logo"></img>
                         
                         </div>
@@ -56,7 +61,7 @@ class SubNav extends Component{
 
 
 
-export default SubNav;
+export default withRouter(SubNav);
 
 
 

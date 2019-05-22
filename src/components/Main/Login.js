@@ -7,7 +7,9 @@ class Login extends Component {
     email: "",
     password: "",
     message:"",
-    isLoginFB:false
+    isLoginFB:false,
+    
+    classMessage: ""
   };
 
   postUserLogin = data => {
@@ -31,6 +33,9 @@ class Login extends Component {
             console.log(data.current_user)
             this.props.history.push('/');
             }
+          else{
+            this.setState({ message: "Please signup", classMessage: 'alert-danger' })
+          }
           
         })
       );
@@ -53,6 +58,7 @@ class Login extends Component {
     this.postUserLogin({ email, password,message });
   };
   render() {
+    const color = `alert ${this.state.classMessage}`;
     const responseFacebook = response => {
       console.log(response);
       if (response) {
@@ -72,6 +78,23 @@ class Login extends Component {
     };
     return (
       <div className="container">
+        {!this.props.isLogin ? (
+          <div className={color}>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+              ×</button>
+            <span class="glyphicon glyphicon-ok"></span>
+
+            {this.state.message}
+          </div>
+
+        ) : (this.props.history.push('/'))
+
+
+
+        }
+
+
+
         <div class="row justify-content-center form-white">
           <div class="col-md-6 mt-5">
             <div class="card bg-login bg-white">

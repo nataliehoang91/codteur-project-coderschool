@@ -62,7 +62,7 @@ render(){
                     <div>
                 <div class="user-pic">
           <img class="login-ava" src={profilepic}
-            alt="User picture"/>
+            alt="User "/>
         </div>
         <div class="user-info text-center">
           < span class = "user-name" > 
@@ -81,7 +81,7 @@ render(){
                     ):(<div className="mb-1">
                 <div class="user-pic">
           <img class="login-ava" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-            alt="User picture"/>
+            alt="User "/>
         </div>
         <div class="user-info text-center">
           <span class="user-name">
@@ -125,24 +125,24 @@ render(){
                            
                     </li>
                     <li>
-                        <a href="#">News</a>
+                        <a href="#">Blogs</a>
                     </li>
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fab fa-discourse px-1"></i>Courses</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li>
-                                <a href="#">Page 1</a>
+                                <a href="#">Enrollment</a>
                             </li>
                             <li>
-                                <a href="#">Page 2</a>
+                                <a href="#">Study Record</a>
                             </li>
                             <li>
-                                <a href="#">Page 3</a>
+                                <a href="#">Materials</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-users px-1"></i>Tutors</a>
+                        <a href="#"><i class="fas fa-users px-1"></i>Community</a>
                     </li>
                     <li className="pt-2">Extra</li>
                     <li>

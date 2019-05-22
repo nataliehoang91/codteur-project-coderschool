@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  withRouter
-} from 'react-router-dom';
-import { Dropdown } from "semantic-ui-react";
+import { withRouter } from "react-router-dom";
+import { Dropdown, Message } from "semantic-ui-react";
 
 // Use your imagination to render suggestions.
 
@@ -15,114 +13,171 @@ class SearchForm extends Component {
       SubjectList: [],
       LocationList: [],
       CityList: [],
-      selectedSubject:"",
+      selectedSubject: "",
       selectedLocation: "",
+      selectedCity: "",
       tutors: [],
-      responseMessage:"",
-      classMessage: ""
+      responseMessage: "",
+      classMessage: "",
+      visibleMessage: false
     };
   }
   getSubjectList = async () => {
-    let response = await fetch("http://localhost:5000/subject");
+    let response = await fetch(
+      "https://backend-codteur-project.herokuapp.com/subject"
+    );
     let data = await response.json();
     this.setState(
       {
         SubjectList: data
       },
-      () => console.log(this.state.SubjectList)
+      () => console.log("Subject List: ", this.state.SubjectList)
     );
+  };
+  getCityList = async () => {
+    let response = await fetch(
+      "https://backend-codteur-project.herokuapp.com/city"
+    );
+    let data = await response.json();
+    this.setState(
+      {
+        CityList: data
+      },
+      () => console.log("City List: ", this.state.CityList)
+      );
   };
 
   getLocationList = async () => {
-    let response = await fetch("http://localhost:5000/location");
+    let response = await fetch(
+      "https://backend-codteur-project.herokuapp.com/location"
+    );
     let data = await response.json();
     this.setState(
       {
         LocationList: data
       },
-      () => console.log(this.state.LocationList)
+      () => console.log("Location List: ", this.state.LocationList)
+      );
+  };
+  handleOnSeclectLocation = (e, data) => {
+    console.log(data);
+    this.setState(
+      {
+        selectedLocation: data.value
+      },
+      () => {
+        console.log("Selected location: ", this.state.selectedLocation);
+      }
     );
   };
-handleOnSeclectLocation = (e,data) =>{
-  
-  this.setState(
-    {
-      selectedLocation: data.value
-    },
-    () => {
-      console.log(this.state.selectedLocation);
-    }
-  );
-}
 
-handleOnSeclectSubject = (e, data) => {
+  handleOnSeclectCity = (e, data) => {
+    console.log(data);
+    this.setState(
+      {
+        selectedCity: data.value
+      },
+      () => {
+        console.log("Selected city: ", this.state.selectedCity);
+      }
+    );
+  };
 
-  this.setState({
-      selectedSubject: data.value
-    },
-    () => {
-      console.log(this.state.selectedSubject);
-    }
-  );
-}
+  handleOnSeclectSubject = (e, data) => {
+    this.setState(
+      {
+        selectedSubject: data.value
+      },
+      () => {
+        console.log("Selected subject: ", this.state.selectedSubject);
+      }
+    );
+  };
+
   componentDidMount() {
     this.getSubjectList();
     this.getLocationList();
+    this.getCityList();
   }
 
-   handleSubmitSearch = async(e) => {
+  handleSubmitSearch = async e => {
     e.preventDefault();
-    let resp = await fetch(`http://localhost:5000/tutors?location=${this.state.selectedLocation}&subject=${this.state.selectedSubject}`);
-    console.log(resp)
+    if(this.state.selectedSubject==="" || this.state.selectedLocation===""||this.state.selectedCity===""){
+      this.setState(
+        {
+          responseMessage: "Please select required field",
+          classMessage: "alert-danger",
+          visibleMessage: true,
+        },
+        () => console.log(this.state.responseMessage)
+      );
+    }
+    else{
+    let resp = await fetch(
+      `https://backend-codteur-project.herokuapp.com/tutors?location=${
+      this.state.selectedLocation
+      }&subject=${this.state.selectedSubject}`
+    );
+    console.log(resp);
     let result = await resp.json();
-     if (result.success == false) {
-       this.setState({
+    if (result.success === false) {
+      this.setState(
+        {
+          responseMessage: "Not Found",
+          classMessage: "alert-danger",
+          visibleMessage: true,
+        },
+        () => console.log(this.state.responseMessage)
+      );
+    } else if (result[0].success === true) {
+      console.log(result)
+      this.setState(
+        {
+          tutors: result
+        },
+        () => console.log("oo", this.state.tutors)
+      );
+      this.props.history.push({
+        pathname: "/results",
+        state: {
+          tutors: this.state.tutors
+        }
+      });
+    }
+  }
+  };
 
-         responseMessage: "Not Found",
-         classMessage: 'alert-danger'
-
-       }, () => console.log(this.state.responseMessage))
-     }
-    else if (result[0].success == true) {
-    
+  closeMessage = () => {
+    console.log("clicked")
     this.setState({
-      tutors: result
-    },() => console.log("oo",this.state.tutors))
-    this.props.history.push({
-      pathname: '/results',
-      state: {
-        tutors: this.state.tutors
-      }
+      visibleMessage: false
     });
   }
-    
-    
-  }
-  render() {
-    console.log(this.props)
-    const color = `alert ${this.state.classMessage}`;
 
-    let SubjectListSelection = this.state.SubjectList.map(subject => { return { key:subject.id, value: subject.id, text:subject.name} });
-    let LocationListSelection = this.state.LocationList.map(item => { return { key: item.id, value: item.id, text: item.name } });
+  render() {
+    console.log(this.props);
+    
+
+    let SubjectListSelection = this.state.SubjectList.map(subject => {
+      return { key: subject.id, value: subject.id, text: subject.name };
+    });
+
+    let CityListSelection = this.state.CityList.map(item => {
+      return { key: item.id, value: item.id, text: item.name };
+    });
+
+    let LocationListSelection = this.state.LocationList.filter(
+      item => item.city_id === this.state.selectedCity
+    ).map(item => {
+      return { key: item.id, value: item.id, text: item.name };
+    });
 
     const learningMethodOptions = [
-      { key: "1", value: "1", text: "Private" },
-      { key: "2", value: "2", text: "Group" }
+      { key: "1", value: "1", text: "Private" }
+      
     ];
-
-    const cityOptions = [
-      { key: "1", value: "1", text: "Ho Chi Minh"},
-      {
-        key: "2", value: "2", text: "Hanoi"},
-      { key: "3", value: "3", text: "Da Nang"}
-    ];
-
-    
 
     return (
-     
-      
-    
       <div class="search-bar-home horizontal">
         <form
           name="hemispherebundle_offer_search"
@@ -140,7 +195,6 @@ handleOnSeclectSubject = (e, data) => {
                 selection
                 options={SubjectListSelection}
                 onChange={this.handleOnSeclectSubject}
-                
               />
             </div>
             <div class="three wide field">
@@ -158,60 +212,42 @@ handleOnSeclectSubject = (e, data) => {
                 fluid
                 search
                 selection
-                options={cityOptions}
+                options={CityListSelection}
+                onChange={this.handleOnSeclectCity}
               />
             </div>
 
             <div class="three wide field">
               <Dropdown
-                placeholder="Select City"
+                placeholder="Select District"
                 fluid
                 search
                 selection
                 options={LocationListSelection}
-                onChange = {
-                  this.handleOnSeclectLocation
-                }
-                
+                onChange={this.handleOnSeclectLocation}
               />
             </div>
 
             <div className="two wide field">
-              
-                <button
-                  type="submit"
-                  className="btn btn-default search-btn btn-block"
-                  onClick={this.handleSubmitSearch}
-                >
-                  Search
-                </button>
-              
+              <button
+                type="submit"
+                className="btn btn-default search-btn btn-block"
+                onClick={this.handleSubmitSearch}
+              >
+                Search
+              </button>
             </div>
           </div>
         </form>
-        <div>
-          
-        </div>
-        {
-        this.state.responseMessage ? (
-                    <div className={color}>
-                        <button type="button" class="close " data-dismiss="alert" aria-hidden="true">
-                            ×</button>
-                        <span class="glyphicon glyphicon-ok"></span>
-
-                        {this.state.responseMessage}
-                    </div>
-
-            ):
-                
-                    
-           (<span></span>)
-            
-            
-            
-            }
+        <div />
+        {!this.state.visibleMessage ? null : (
+          <Message
+            negative
+            onDismiss={this.closeMessage}
+            content={this.state.responseMessage}
+          />
+        )}
       </div>
-    
     );
   }
 }

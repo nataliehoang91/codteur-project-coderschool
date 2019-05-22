@@ -120,9 +120,9 @@ class Steps extends Component {
                 </div>
             </div>
             <div className="row">
-                <div className="col-6 how-it-works-step-graphic-left">
+                <div className="col-6 how-it-works-step-graphic-left-last">
                     <img
-                        src = "/img/step-4.jpg"
+                        src = "/img/step-4.png"
                         alt=""
                         class = "how-it-works-image size-adjust"
                     />
@@ -136,7 +136,7 @@ class Steps extends Component {
 
                 <div
                     id="how-it-works-step-2"
-                    class="how-it-works-step-right is-active  col-6"
+                    class="how-it-works-step-right-last is-active  col-6"
                 >
                    
                     <div class="how-it-works-step-content">

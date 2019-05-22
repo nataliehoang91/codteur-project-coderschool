@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Redirect} from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
@@ -6,8 +7,9 @@ import App from "./App";
 import Login from "./components/Main/Login"
 import Signup from "./components/Main/Signup"
 import SearchResult from "./components/Main/SearchResult"
+import Register from "./components/Main/Register"
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import Enrollment from "./components/Main/Enrollment"
 
 class MainApp extends Component {
     constructor() {
@@ -52,6 +54,7 @@ class MainApp extends Component {
     }
     render(){
         const childProps={isLogin:this.state.isLogin,current_user:this.state.current_user,LogOut:this.LogOut,LogIn:this.LogIn,handleUserName:this.handleUserName,fLoginFB:this.fLogInFB,handleUserImg:this.handleUserImg,user_img:this.state.user_img}
+        const username = localStorage.getItem('username')
         return (
 
                 <div>
@@ -59,8 +62,26 @@ class MainApp extends Component {
                 <Route exact path="/" render={(props) => <App {...props} {...childProps} />} />
             <Route path="/signup" render={(props) => <Signup {...props} {...childProps} />} />
             <Route path="/results" render={(props) => <SearchResult {...props} {...childProps} />} />
-
-            </div>
+                <Route path="/register" render={(props) => <Register {...props} {...childProps} />} />
+            
+                <Route
+                    path="/enrollment"
+                    render={props =>
+                        username ? (
+                            <Enrollment {...props} {...childProps} />
+                        ) : (
+                                <Redirect
+                                    to={{
+                                        pathname: "/login",
+                                        state: { from: props.location }
+                                    }}
+                                />
+                            )
+                    }
+                />
+            
+            
+                </div>
     );
 
 }}

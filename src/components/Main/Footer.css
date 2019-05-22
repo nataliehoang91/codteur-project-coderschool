@@ -1,5 +1,5 @@
 footer.nb-footer {
-background: #222;
+background: #1e1729;
 border-top: 1px solid #ffbd27;
 }
 
@@ -32,10 +32,11 @@ footer.nb-footer .footer-info-single {
 margin-top: 30px; }
 footer.nb-footer .footer-info-single .title {
 color: #aaa;
+font-weight: 900;
 text-transform: uppercase;
 font-size: 16px;
 border-left: 2px solid #ffcc01;
-padding-left: 5px; }
+padding-left: 10px; }
 footer.nb-footer .footer-info-single ul li a {
 display: block;
 color: #aaa;

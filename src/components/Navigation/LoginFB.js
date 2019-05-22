@@ -1,6 +1,6 @@
 import React from "react";
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
-import GoogleLogin from 'react-google-login';
+
 
 class LoginFB extends React.Component {
 

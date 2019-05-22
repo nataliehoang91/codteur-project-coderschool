@@ -7,8 +7,45 @@ import Navigation from "../Navigation/Navigation"
 import SubNav from "./SubNav"
 import { Dropdown } from "semantic-ui-react";
 
+const LearningHours = [
+  { key: "1", value: "1", text: "1" },
+  { key: "2", value: "2", text: "2" },
+  { key: "3", value: "3", text: "3" }
+
+];
+
 class SearchResult extends Component{
+
+  state={
+    selectedHour:"",
+    amount:0
+
+  }
+
+  handleOnSeclectHour = (e, data) => {
+    e.preventDefault()
+    console.log(data);
+    this.setState(
+      {
+        selectedHour: data.value
+
+      },
+      () => {
+        console.log("Selected Hour: ", this.state.selectedHour);
+      }
+    );
+  };
+
+
+
+
     render(){
+      // const LearningHours = [
+      //   { key: "1", value: "1", text: "1" },
+      //   { key: "2", value: "2", text: "2" },
+      //   { key: "3", value: "3", text: "3" }
+
+      // ];
         const { state } = this.props.history.location
         console.log(state)
         console.log(state.tutors[0].email)
@@ -35,31 +72,18 @@ class SearchResult extends Component{
           <div class="fields">
             
             <div class="eight wide field">
-              <Dropdown
-                placeholder="Rating"
-                fluid
-                search
-                selection
-               
-              />
+            
             </div>
 
             <div class="eight wide field">
-              <Dropdown
-                placeholder="All price"
-                fluid
-                search
-                selection
-                options
-                
-              />
+             
             </div>
 
             
           </div>
         </form>
-        <div>
-          
+        <div className="text-right">
+                        <a href="/">Back to homepage</a>
         </div>
        
       </div>
@@ -69,7 +93,7 @@ class SearchResult extends Component{
              
                   <section class="tutor-list-result" aria-label="testimonal">
                     <div className="row ">
-                      <div class="col-md-5 text-dark">
+                      <div class="col-md-4 text-dark">
                         <img
                           class="img-responsive-a"
                           src = "https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
@@ -79,18 +103,60 @@ class SearchResult extends Component{
                         <p className="result-title">Name:<span className="result-content"> {item.name}</span></p>
                         
                         <p className="result-title"> Subject:<span className="result-content"> {item.subject}</span></p>
+                        <p className="result-title">Rate per hour: <span className="result-content">VND {item.hourly_rate.toLocaleString()}</span></p>
+
                       </div>
                       <div class="col-md-7">
                         <div aria-label="testimonial comment">
                         
                         
-                         <p className="result-title">Rate per hour: <span className="result-content"> {item.hourly_rate}</span></p>
                          <blockquote className="text-dark"aria-label="testimonial comment">
-                          "Lorem Ipsum is simply dummy text of the printing
-                          and typesetting industryLorem Ipsum has been the industry 's standard dummy text ever since the 1500s, when an unknown printer took make a "
-                         
+                            <p className="font-weight-bold">Background Sumamry</p>
+                          {item.description}
                         </blockquote>
-                        <button className="btn btn-chat">CHAT WITH TUTOR</button> <button className="btn btn-book">BOOK NOW</button>
+                        
+                          <div class="search-bar-results horizontal">
+                            <form
+                              name="hemispherebundle_offer_search"
+                              id="search-form"
+                              // class="main-search border-less-inputs background-dark narrow"
+                              class="ui form"
+
+                            >
+                              <div class="fields">
+
+                                <div class="four wide field d-flex align-items-center mr-5">
+                                  <label className="mr-3">Hours</label>
+                                  <Dropdown
+                                    placeholder="Hours"
+                                    fluid
+                                    search
+                                    selection
+                                    options={LearningHours}
+                                    onChange={this.handleOnSeclectHour}
+
+                                  />
+
+                                  
+                                </div>
+
+                                <div class="five wide field d-flex align-items-center mr-5">
+                                  <label className="mr-3">Estimated Payment</label><span> VND{(this.state.selectedHour*item.hourly_rate).toLocaleString()}</span>
+                                </div>
+                                <div class="seven wide field d-flex align-items-center mr-5">
+                                  <label className="mr-1">Note to Tutor</label><input type="text"/>
+                                </div>
+
+                              </div>
+                            </form>
+                            <div>
+
+                            </div>
+
+                          </div>
+                          <div className="text-right">
+                            <button className="btn btn-chat">CHAT WITH TUTOR</button> <a href="/enrollment"><button className="btn btn-book">BOOK NOW</button></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -110,7 +176,7 @@ class SearchResult extends Component{
       </div>
        </div>
     </div>
-   <a href="/" className="text-right">Back to homepage</a>
+  
 </div>
 
 

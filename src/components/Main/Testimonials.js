@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Testimonials extends Component {
   render() {
     return (
-      <div>
+      <div className="bg-testimonial">
         <div class="vc_empty_space">
           <span class="vc_empty_space_inner" />
         </div>
@@ -22,9 +22,7 @@ class Testimonials extends Component {
         </div>
 
         <div class="under-title-border"> </div>
-        <div class="vc_empty_space">
-          <span class="vc_empty_space_inner" />
-        </div>
+       
         
         <div
           id="test"
@@ -49,15 +47,15 @@ class Testimonials extends Component {
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row margin-testimonial">
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">
                       <div class="col-md-5">
                         <img
                           class="img-responsive"
                           src="https://assets1.biggerpockets.com/uploads/social_user/user_avatar/838306/big_1541461757-avatar-justinfay.jpg"
-                          alt="description of image"
-                          alt="description of image"
+                          alt="description of"
+                        
                         />
                       </div>
                       <div class="col-md-7">
@@ -82,8 +80,7 @@ class Testimonials extends Component {
                         <img
                           class="img-responsive"
                           src="https://www.gannett-cdn.com/-mm-/1406738037af2189b628f886370bcb5a46e24595/c=0-0-1882-1415/local/-/media/USATODAY/USATODAY/2014/11/07/635509882498682692-138017387.jpg?width=534&height=401&fit=crop"
-                          alt="description of image"
-                          alt="description of image"
+                          alt="test"
                         />
                       </div>
                       <div class="col-md-7">
@@ -104,16 +101,16 @@ class Testimonials extends Component {
               </div>
             </div>
             <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-6">
+              <div class="row margin-testimonial">
+                <div class="col-md-6 ">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">
                       <div class="col-md-5">
                         <img
                           class="img-responsive"
                           src="https://assets1.biggerpockets.com/uploads/social_user/user_avatar/838306/big_1541461757-avatar-justinfay.jpg"
-                          alt="description of image"
-                          alt="description of image"
+                          alt="description of"
+
                         />
                       </div>
                       <div class="col-md-7">
@@ -138,8 +135,7 @@ class Testimonials extends Component {
                         <img
                           class="img-responsive"
                           src="https://www.gannett-cdn.com/-mm-/1406738037af2189b628f886370bcb5a46e24595/c=0-0-1882-1415/local/-/media/USATODAY/USATODAY/2014/11/07/635509882498682692-138017387.jpg?width=534&height=401&fit=crop"
-                          alt="description of image"
-                          alt="description of image"
+                          alt="test"
                         />
                       </div>
                       <div class="col-md-7">
@@ -160,16 +156,16 @@ class Testimonials extends Component {
               </div>
             </div>
             <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-6">
+              <div class="row margin-testimonial">
+                <div class="col-md-6 ">
                   <section class="testimonial" aria-label="testimonal">
                     <div class="row">
                       <div class="col-md-5">
                         <img
                           class="img-responsive"
                           src="https://assets1.biggerpockets.com/uploads/social_user/user_avatar/838306/big_1541461757-avatar-justinfay.jpg"
-                          alt="description of image"
-                          alt="description of image"
+                          alt="description of"
+
                         />
                       </div>
                       <div class="col-md-7">
@@ -194,8 +190,7 @@ class Testimonials extends Component {
                         <img
                           class="img-responsive"
                           src="https://www.gannett-cdn.com/-mm-/1406738037af2189b628f886370bcb5a46e24595/c=0-0-1882-1415/local/-/media/USATODAY/USATODAY/2014/11/07/635509882498682692-138017387.jpg?width=534&height=401&fit=crop"
-                          alt="description of image"
-                          alt="description of image"
+                          alt="test"
                         />
                       </div>
                       <div class="col-md-7">

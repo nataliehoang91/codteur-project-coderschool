@@ -12,7 +12,7 @@ class Signup extends Component {
 }
 
     postUserSignup=(data)=> {
-        const url = "http://localhost:5000/signup";
+        const url = "https://backend-codteur-project.herokuapp.com/signup";
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

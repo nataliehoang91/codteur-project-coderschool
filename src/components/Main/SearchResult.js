@@ -125,7 +125,7 @@ class SearchResult extends Component{
                             >
                               <div class="fields">
 
-                                <div class="four wide field d-flex align-items-center mr-5">
+                                <div class="eight wide field d-flex align-items-center mr-5">
                                   <label className="mr-3">Hours</label>
                                   <Dropdown
                                     placeholder="Hours"
@@ -140,13 +140,15 @@ class SearchResult extends Component{
                                   
                                 </div>
 
-                                <div class="five wide field d-flex align-items-center mr-5">
+                                <div class="eight wide field d-flex align-items-center ">
                                   <label className="mr-3">Estimated Payment</label><span> VND{(this.state.selectedHour*item.hourly_rate).toLocaleString()}</span>
                                 </div>
-                                <div class="seven wide field d-flex align-items-center mr-5">
-                                  <label className="mr-1">Note to Tutor</label><input type="text"/>
-                                </div>
-
+                                
+                              </div>
+                              <div className="field">
+                              <div class="sixteen wide field ">
+                                <label className="mr-1 text-left">Note to Tutor</label><textarea></textarea>
+                              </div>
                               </div>
                             </form>
                             <div>

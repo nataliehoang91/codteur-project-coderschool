@@ -92,16 +92,16 @@ class Signup extends Component {
                                 </div>
                                 <div class="md-form">
                                     <i class="fas fa-user-alt prefix grey-text"></i>
-                                    <input name="username" type="text" id="defaultForm-email" placeholder="Your Username" class="form-control" onChange={this.handleInputOnChange} />
+                                    <input name="username" type="text" id="defaultForm-email" placeholder="Your Username" class="form-control text-dark" onChange={this.handleInputOnChange} />
 
                                 </div> <div class="md-form">
                                     <i class="fa fa-envelope prefix grey-text"></i>
-                                    <input name="email" type="text" id="defaultForm-email" placeholder="Your Email" class="form-control" onChange={this.handleInputOnChange} />
+                                    <input name="email" type="text" id="defaultForm-email" placeholder="Your Email" class="form-control text-dark" onChange={this.handleInputOnChange} />
 
                                 </div>
                                 <div class="md-form">
                                     <i class="fa fa-lock prefix grey-text"></i>
-                                    <input name="password" type="password" id="defaultForm-pass" placeholder="Your Password" class="form-control" onChange={this.handleInputOnChange} />
+                                    <input name="password" type="password" id="defaultForm-pass" placeholder="Your Password" class="form-control text-dark" onChange={this.handleInputOnChange} />
 
                                 </div>
                                 <div class="text-center">

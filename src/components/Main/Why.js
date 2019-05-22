@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Why extends Component {
     render() {
         return(
-            <div>
+            <div className="bg-why">
                 <div class="vc_empty_space">
                     <span class="vc_empty_space_inner" />
                 </div>
@@ -47,7 +47,7 @@ class Why extends Component {
                                             <span class="fas fa-headset icon-us"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h4>Your own Personal Learning Consultant</h4>
+                                            <h3 className="titlecolor">Your own Personal<span className="partlytitlecolor">Learning Consultant</span> </h3>
                                             <p>Your consultant is there to help you eliminate stress, like helping your child prepare for standardized tests or sending you important reminders.</p>
                                         </div>
                                     </div>
@@ -67,7 +67,7 @@ class Why extends Component {
                                             <span class="fas fa-comments icon-us"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h4>Feedback that matters</h4>
+                                            <h3 className="titlecolor"><span className="partlytitlecolor">Feedback</span> that matters</h3>
                                             <p>We provide reports you’ll actually want to read, from session recaps and advice to quarterly high-level reports. You’ll also learn about your child’s learning style and development of non-academic skills.</p>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ class Why extends Component {
                                             <span class="fas fa-award icon-us"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h4>Perfectly matched tutors</h4>
+                                            <h3 className="titlecolor"><span className="partlytitlecolor">Perfectly matched</span> tutors</h3>
                                             <p>Our personalized matching process considers your child’s learning styles, learning accommodations, skill level, and much more to connect them with competent and personable</p>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@ class Why extends Component {
                                             <span class="fas fa-heart icon-us"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            < h4 > We take care of your tutors</h4>
+                                            < h3 className="titlecolor" > We <span className="partlytitlecolor">take care </span>of your tutors</h3>
                                             <p>Thanks to our platform,don’t have to spend time on logistics or payment, and can spend their time focusing on helping your child.</p>
                                         </div>
                                     </div>

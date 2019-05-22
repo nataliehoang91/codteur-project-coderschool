@@ -15,24 +15,25 @@ class Footer extends Component {
                                     <div class="footer-info-single">
                                         <h2 class="title">Help Center</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> FAQs</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
+                                           
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-question"></i> FAQs</a></li>
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-map"></i> Sitemap</a></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
 
                             <div class="col-lg-3 col-md-3 col-sm-6 pl-5">
                                     <div class="footer-info-single">
-                                        <h2 class="title">Customer information</h2>
+                                        <h2 class="title">User information</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> FAQs</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li>
-                                        </ul>
+                                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-address-card"></i> About Us</a></li>
+                                            
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-trophy"></i> Tutor Qualification</a></li>
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-file-signature"></i> Contact Us</a></li>
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="far fa-newspaper"></i> Press Corner</a></li>
+                                        <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-graduation-cap"></i> Learning resources</a></li>
+                                            </ul>
                                     </div>
                                 </div>
 
@@ -40,10 +41,10 @@ class Footer extends Component {
                                     <div class="footer-info-single">
                                         <h2 class="title">Security & privacy</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
-                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Store Locations</a></li>
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-align-center"></i> Terms Of Use</a></li>
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                                            <li><a href="http://www.nextbootstrap.com/" title=""><i class="fas fa-comment-dollar"></i> Refund Policy</a></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -51,7 +52,7 @@ class Footer extends Component {
                             <div class="col-lg-3 col-md-3 col-sm-6">
                                     <div class="footer-info-single">
                                         <h2 class="title">Payment</h2>
-                                        <p>jkhkjhjk</p>
+                                    <p><i class="fas fa-receipt"></i>Terms & Conditions</p>
 
                                     </div>
                                 </div>

@@ -2,7 +2,33 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class TutorDisplay extends Component {
+state={
+  TutorList:""
+}
+  getTutorList= async () => {
+    let response = await fetch(
+      "https://backend-codteur-project.herokuapp.com/tutor"
+    );
+    let data = await response.json();
+    this.setState(
+      {
+        TutorList: data
+      },
+      () => console.log("Tutor List: ", this.state.TutorList))
+  };
+ 
+
+  componentDidMount(){
+    this.getTutorList();
+  }
   render() {
+    
+    const SampleTutorList1=this.state.TutorList.slice(0,4)
+    const SampleTutorList2 = this.state.TutorList.slice(4, 8)
+    const SampleTutorList3 = this.state.TutorList.slice(8, 12)
+    let sampleAva = ["/img/sample_tutor1.png", "/img/sample_tutor2.png", "/img/sample_tutor3.png","/img/sample_tutor4.png"]
+    console.log(SampleTutorList1, SampleTutorList2, SampleTutorList3)
+    
     return (
       <div>
         <div class="vc_empty_space">
@@ -51,494 +77,175 @@ class TutorDisplay extends Component {
             />
           </ol>
           <div class="carousel-inner">
+
+          
             <div class="carousel-item active">
               <div className="row justify-content-center">
-                
-                  <div
-                    class="featured-tutor text-center "
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://nyumba.co.zm/wp-content/uploads/2016/03/Debra-Rose_avatar_1434742307-150x150.jpg"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Alice
+                {SampleTutorList1 &&  SampleTutorList1.map((item,index) => {
+                  return (
+
+                    <div
+                      class="featured-tutor text-center "
+                      data-wide-target=""
+                      style={{ cursor: "pointer" }}
+                    >
+
+                      <img
+                        class="featured-tutor-profile-picture"
+                        src={`/img/sample_tutor${index+1}.png`}
+                        alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
+                        title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
+                      />
+                      <h3 class="featured-tutor-name">
+                        <a
+                          class="featured-tutor-link"
+                          title="Alice Italian private tutor in London"
+                          href="/learn-italian-with-alice-in-london-48676"
+                          data-wide=""
+                        >
+                          {item.name}
                       </a>
-                    </h3>
-                    <div class="featured-tutor-course ">HTML/CSS</div>
-                   
-                    <div class="featured-tutor-city mb-4">
-                      <span class="fa fa-map-marker" /> HCMC
+                      </h3>
+                      <div class="featured-tutor-course ">{item.subject}</div>
+
+                      <div class="featured-tutor-city mb-4">
+                        <span class="fas fa-map-marker-alt" />{" "} {item.yearexp} years
                     </div>
-                  </div>
-                
-               
-                  <div
-                    class="featured-tutor text-center"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/220px-Elon_Musk_Royal_Society.jpg"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Ben
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course ">Python</div>
-                    
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> Ha Noi
                     </div>
-                  </div>
+
+                  )
+                })}
+                  
+
                 
-                
-                  <div
-                    class="featured-tutor text-center "
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://lh3.googleusercontent.com/BKBnEG9M9fHvRM-Bw4Oi7fgedpSVD9c0EmFvItCiQg4gQ8C-lsDaq59r3ECd1-tMSrx_3iHCWDqCYQdNPrnlUDnWQ2o0Zm0=s750"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Tom
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course">GoLang</div>
-                    
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> HCMC
+              </div>
+            </div>
+
+
+            <div class="carousel-item">
+              <div className="row justify-content-center">
+                {SampleTutorList2 && SampleTutorList2.map((item, index) => {
+                  return (
+
+                    <div
+                      class="featured-tutor text-center "
+                      data-wide-target=""
+                      style={{ cursor: "pointer" }}
+                    >
+
+                      <img
+                        class="featured-tutor-profile-picture"
+                        src={`/img/sample_tutor${index + 1}.png`}
+                        alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
+                        title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
+                      />
+                      <h3 class="featured-tutor-name">
+                        <a
+                          class="featured-tutor-link"
+                          title="Alice Italian private tutor in London"
+                          href="/learn-italian-with-alice-in-london-48676"
+                          data-wide=""
+                        >
+                          {item.name}
+                        </a>
+                      </h3>
+                      <div class="featured-tutor-course ">{item.subject}</div>
+
+                      <div class="featured-tutor-city mb-4">
+                        <span class="fas fa-map-marker-alt" />{" "} {item.yearexp} years
                     </div>
-                  </div>
-                
-                  <div
-                    class="featured-tutor text-center "
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://i0.wp.com/fifthperson.com/wp-content/uploads/2015/04/warren-buffett.jpg?resize=620%2C388&ssl=1"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Ken
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course">Swift(iOS)</div>
-                    
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> Ha Noi
                     </div>
-                  </div>
-                
+
+                  )
+                })}
+
+
+
               </div>
             </div>
             <div class="carousel-item">
-              <div className="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture mt-4"
-                      src="https://nyumba.co.zm/wp-content/uploads/2016/03/Debra-Rose_avatar_1434742307-150x150.jpg"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Alice
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course ">HTML/CSS</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
+              <div className="row justify-content-center">
+                {SampleTutorList3 && SampleTutorList3.map((item, index) => {
+                  return (
+
+                    <div
+                      class="featured-tutor text-center "
+                      data-wide-target=""
+                      style={{ cursor: "pointer" }}
+                    >
+
+                      <img
+                        class="featured-tutor-profile-picture"
+                        src={`/img/sample_tutor${index + 1}.png`}
+                        alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
+                        title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
+                      />
+                      <h3 class="featured-tutor-name">
+                        <a
+                          class="featured-tutor-link"
+                          title="Alice Italian private tutor in London"
+                          href="/learn-italian-with-alice-in-london-48676"
+                          data-wide=""
+                        >
+                          {item.name}
+                        </a>
+                      </h3>
+                      <div class="featured-tutor-course ">{item.subject}</div>
+
+                      <div class="featured-tutor-city mb-4">
+                        <span class="fas fa-map-marker-alt" />{" "} {item.yearexp} years
                     </div>
-                    <div class="featured-tutor-city mb-4">
-                      <span class="fa fa-map-marker" /> HCMC
                     </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center border"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/220px-Elon_Musk_Royal_Society.jpg"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Ben
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course ">Python</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                    </div>
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> Ha Noi
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center border"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://lh3.googleusercontent.com/BKBnEG9M9fHvRM-Bw4Oi7fgedpSVD9c0EmFvItCiQg4gQ8C-lsDaq59r3ECd1-tMSrx_3iHCWDqCYQdNPrnlUDnWQ2o0Zm0=s750"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Tom
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course">GoLang</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                    </div>
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> HCMC
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center border"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://i0.wp.com/fifthperson.com/wp-content/uploads/2015/04/warren-buffett.jpg?resize=620%2C388&ssl=1"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Ken
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course">Swift(iOS)</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                    </div>
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> Ha Noi
-                    </div>
-                  </div>
-                </div>
+
+                  )
+                })}
+
+
+
               </div>
             </div>
-            <div class="carousel-item">
-              <div className="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center border"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture mt-4"
-                      src="https://nyumba.co.zm/wp-content/uploads/2016/03/Debra-Rose_avatar_1434742307-150x150.jpg"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Alice
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course ">HTML/CSS</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                    </div>
-                    <div class="featured-tutor-city mb-4">
-                      <span class="fa fa-map-marker" /> HCMC
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center border"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/220px-Elon_Musk_Royal_Society.jpg"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Ben
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course ">Python</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                    </div>
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> Ha Noi
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center border"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://lh3.googleusercontent.com/BKBnEG9M9fHvRM-Bw4Oi7fgedpSVD9c0EmFvItCiQg4gQ8C-lsDaq59r3ECd1-tMSrx_3iHCWDqCYQdNPrnlUDnWQ2o0Zm0=s750"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Tom
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course">GoLang</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                    </div>
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> HCMC
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                  <div
-                    class="featured-tutor text-center border"
-                    data-wide-target=""
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img
-                      class="featured-tutor-profile-picture"
-                      src="https://i0.wp.com/fifthperson.com/wp-content/uploads/2015/04/warren-buffett.jpg?resize=620%2C388&ssl=1"
-                      alt="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                      title="Alice - London: Hi, I'm Alice. I have a BA in Languages and Li..."
-                    />
-                    <h3 class="featured-tutor-name">
-                      <a
-                        class="featured-tutor-link"
-                        title="Alice Italian private tutor in London"
-                        href="/learn-italian-with-alice-in-london-48676"
-                        data-wide=""
-                      >
-                        Ken
-                      </a>
-                    </h3>
-                    <div class="featured-tutor-course">Swift(iOS)</div>
-                    <div>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                      <span class="star-active popup-star popup-star2">
-                        <i class="fa fa-star" />
-                      </span>
-                    </div>
-                    <div class="featured-tutor-city">
-                      <span class="fa fa-map-marker" /> Ha Noi
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          
             </div>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
           <a
             class="carousel-control-prev"
             href="#carouselExampleIndicators"

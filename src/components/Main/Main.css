@@ -724,7 +724,7 @@ position: absolute;
     box-shadow: 0 1px 0 0 #fff; 
 }
 .form-white input[type=text]:focus:not([readonly]) + label {
-    color: #fff; 
+    color: black; 
 }
 .form-white input[type=password]:focus:not([readonly]) {
     border-bottom: 1px solid rgb(14, 12, 12);
@@ -732,16 +732,16 @@ position: absolute;
     box-shadow: 0 1px 0 0 #fff; 
 }
 .form-white input[type=password]:focus:not([readonly]) + label {
-    color: #fff; 
+    color:black; 
 }
 .form-white input[type=password], .form-white input[type=text] {
     border-bottom: 1px solid #fff; 
 }
 .form-white .form-control:focus {
-    color: #fff;
+    color: black;
 }
 .form-white .form-control {
-    color: #fff;
+    color: black;
 }
 .form-white textarea.md-textarea:focus:not([readonly]) {
     border-bottom: 1px solid rgb(8, 8, 8);

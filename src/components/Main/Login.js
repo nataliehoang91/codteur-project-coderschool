@@ -14,7 +14,7 @@ class Login extends Component {
 
   postUserLogin = data => {
     console.log(JSON.stringify(data))
-    fetch("http://localhost:5000/login", {
+    fetch("hhttps://backend-codteur-project.herokuapp.com/login", {
       method: "POST",
 
       headers: {

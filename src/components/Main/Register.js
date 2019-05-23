@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {  Message } from "semantic-ui-react";
 import {
     withRouter
 } from 'react-router-dom';
@@ -8,6 +9,8 @@ import SubNav from "./SubNav";
 class Register extends Component{
     state={
         isVerified:false,
+        visibleMessage: false,
+        responseMessage: "",
         
         code:""
     }
@@ -18,15 +21,28 @@ this.setState({
      }
 
      handleOnClick=()=>{
-         if (this.state.code="ABC"){
+         if (this.state.code==="ABC"){
                  
                  this.setState({
-                     isVerified: true
+                     isVerified: true,
+                     visibleMessage: false
+                    
                  });
              }
+        else{
+             this.setState({
+                 responseMessage: "Wrong Code",
+                 visibleMessage: true
+             });
+        }
          }
      
-
+    closeMessage = () => {
+        console.log("clicked")
+        this.setState({
+            visibleMessage: false
+        });
+    }
    
     render(){
         return(
@@ -65,8 +81,15 @@ this.setState({
                                 <h2 class="responsive-step-pricing text-dark wow fadeIn">STEP 2: <span className="description-step">CHOOSE YOUR PRICING PLAN</span></h2>
                                 <p>After your profile has been verified, you will receive the code. Please enter the code to receive your pricing plan</p>
                                 
-                                <input name="code" value={this.state.code} type="text" onChange={this.handleInput}/> <button onClick={this.handleOnClick}>Submit</button>
-                            </div>
+                                <input className="margin-li-text" name="code" value={this.state.code} type="text" onChange={this.handleInput}/> <button onClick={this.handleOnClick}>Submit</button>
+                                {!this.state.visibleMessage ? null : (
+                                    <Message
+                                        negative
+                                        onDismiss={this.closeMessage}
+                                        content={this.state.responseMessage}
+                                    />
+                                )}
+                                </div>
                         </div>
                         { this.state.isVerified ? (
                             <section id="pricing" class="pricing py-5" >
@@ -143,6 +166,7 @@ this.setState({
                         ):(<span></span>)
                         
                         }
+
                         <div class="vc_empty_space">
                             <span class="vc_empty_space_inner" />
                         </div>

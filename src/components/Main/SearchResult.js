@@ -147,7 +147,7 @@ class SearchResult extends Component{
                               </div>
                               <div className="field">
                               <div class="sixteen wide field ">
-                                <label className="mr-1 text-left">Note to Tutor</label><textarea></textarea>
+                                <label className="mr-1">Note to Tutor</label><textarea></textarea>
                               </div>
                               </div>
                             </form>

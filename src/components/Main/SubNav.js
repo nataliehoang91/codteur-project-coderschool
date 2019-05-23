@@ -34,7 +34,7 @@ class SubNav extends Component{
        
         return(
 
-            <div id="navbartoggle" className={(this.state.scroll > 600 ) || (url==='/results')? "is-black nav-bg" : "nav-bg"}>
+            <div id="navbartoggle" className={(this.state.scroll > 600) || (url === '/results') || (url === '/register')? "is-black nav-bg" : "nav-bg"}>
                 <div class=" d-flex justify-content-between py-2">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-logo">
                         <img class="mainlogo img-responsive ml-3" src="/img/logonew.png" alt="logo"></img>

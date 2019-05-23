@@ -721,7 +721,7 @@ position: absolute;
     color: #fff; 
 }
 .form-white input[type=password], .form-white input[type=text] {
-    border-bottom: 1px solid #000000; 
+    border-bottom: 1px solid #fff; 
 }
 .form-white .form-control:focus {
     color: #fff;

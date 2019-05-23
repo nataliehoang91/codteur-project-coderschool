@@ -10,12 +10,12 @@ class Steps extends Component {
         </div>
         <div className="row">
           <div class="section_custom_heading  ">
-            <h2 class="responsive-h5 text-dark">Easy Steps</h2>
+            <h2 class="responsive-h5 text-dark wow fadeIn">Easy Steps</h2>
           </div>
         </div>
         <div className="row">
           <div className="section_custom_heading">
-            <h2 className="subject-title-description text-dark">
+            <h2 className="subject-title-description text-dark wow fadeInUp">
               Just take few minutes
             </h2>
           </div>
@@ -32,12 +32,12 @@ class Steps extends Component {
           >
             <div class="how-it-works-step-content-left">
               <header class="how-it-works-step-header">
-                <h3 class="heading-3 animated FadeIn delay-5s">1. Request Tutor</h3>
+                <h3 class="heading-3 wow FadeIn">1. Request Tutor</h3>
               </header>
               <div class="vc_empty_space">
                 <span class="vc_empty_space_inner" />
               </div>
-              <p class="how-it-works-text-left">
+              <p class="how-it-works-text-left wow bounceInLeft">
                 Tell us what you want to learn, and where and when you want to
                 learn it. Let us know if you have any specific learning
                 accommodations or needs.
@@ -49,7 +49,7 @@ class Steps extends Component {
             <img
               src = "/img/step-1.png"
               alt=""
-              class="how-it-works-image"
+              class="how-it-works-image wow bounceInRight"
             />
                     <div class="vc_empty_space">
                         <span class="vc_empty_space_inner" />
@@ -65,7 +65,7 @@ class Steps extends Component {
             <img
                         src = "/img/step-2.png"
               alt=""
-              class = "how-it-works-image size-adjust"
+              class= "how-it-works-image size-adjust  wow bounceInLeft"
             />
                     <div class="vc_empty_space">
                         <span class="vc_empty_space_inner" />
@@ -83,12 +83,12 @@ class Steps extends Component {
             
             <div class="how-it-works-step-content">
               <header class="how-it-works-step-header">
-                <h3 class="heading-3">2. Receive personalized matches</h3>
+                <h3 class="heading-3 wow FadeIn">2. Receive personalized matches</h3>
               </header>
               <div class="vc_empty_space">
                 <span class="vc_empty_space_inner" />
               </div>
-              <p class="how-it-works-text-right">
+              <p class="how-it-works-text-right wow bounceInRight">
                 We send your request to Gooroos who are a good fit, and you’ll
                 get responses from tutors who are willing to help.
               </p>
@@ -103,12 +103,12 @@ class Steps extends Component {
                 >
                     <div class="how-it-works-step-content-left">
                         <header class="how-it-works-step-header">
-                            <h3 class="heading-3">3. Book and have a great first session - guaranteed!</h3>
+                <h3 class="heading-3 wow FadeIn">3. Book and have a great first session - guaranteed!</h3>
                         </header>
               <div class="vc_empty_space">
                 <span class="vc_empty_space_inner" />
               </div>
-                        <p class="how-it-works-text-left">
+              <p class="how-it-works-text-left wow bounceInLeft">
                             Book your favorite tutor match and learn with them in person! If you’re not satisfied for any reason with your first session, get another match and session - on us.
               </p>
                     </div>
@@ -118,7 +118,7 @@ class Steps extends Component {
                     <img
                         src = "/img/step-3.png"
                         alt=""
-                        class="how-it-works-image"
+              class="how-it-works-image wow bounceInRight"
                     />
                     <div class="vc_empty_space">
                         <span class="vc_empty_space_inner" />
@@ -133,7 +133,7 @@ class Steps extends Component {
                     <img
                         src = "/img/step-4.png"
                         alt=""
-                        class = "how-it-works-image size-adjust"
+              class= "how-it-works-image size-adjust wow bounceInLeft"
                     />
                     <div class="vc_empty_space">
                         <span class="vc_empty_space_inner" />
@@ -150,12 +150,12 @@ class Steps extends Component {
                    
                     <div class="how-it-works-step-content">
                         <header class="how-it-works-step-header">
-                            <h3 class="heading-3">4. Receive feedback</h3>
+                <h3 class="heading-3 wow FadeIn">4. Receive feedback</h3>
                         </header>
               <div class="vc_empty_space">
                 <span class="vc_empty_space_inner" />
               </div>
-                        <p class="how-it-works-text-right">
+              <p class="how-it-works-text-right  wow bounceInRight">
                             We send your request to us who are a good fit, and you’ll
                             get responses from tutors who are willing to help.
               </p>

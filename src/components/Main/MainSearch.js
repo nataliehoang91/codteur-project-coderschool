@@ -16,7 +16,7 @@ class MainSearch extends Component{
             <div id="search-container" ref={el => (this.instance = el)} className="search-container">
             
                 <div className="wrap">
-                    <h3 className="title-font animated slideInDown fast delay-0.5s">FIND THE RIGHT TUTOR FOR YOU</h3>
+                    <h3 className="title-font animated zoomInRight delay-1s">FIND THE RIGHT TUTOR FOR YOU</h3>
                     <Searchform />
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Redirect} from "react-router-dom";
+import WOW from 'wowjs'
 
 import "./index.css";
 import App from "./App";
@@ -24,7 +25,9 @@ class MainApp extends Component {
         }
 
     }
-
+componentDidMount(){
+    new WOW.WOW().init() 
+}
     LogOut = () => {
         this.setState({
             isLoginFB:false,
@@ -52,6 +55,7 @@ class MainApp extends Component {
             user_img: user
         })
     }
+    
     render(){
         const childProps={isLogin:this.state.isLogin,current_user:this.state.current_user,LogOut:this.LogOut,LogIn:this.LogIn,handleUserName:this.handleUserName,fLoginFB:this.fLogInFB,handleUserImg:this.handleUserImg,user_img:this.state.user_img}
         const username = localStorage.getItem('username')

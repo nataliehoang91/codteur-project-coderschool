@@ -10,12 +10,12 @@ class ExtraInfo extends Component {
         </div>
         <div className="row">
           <div class="section_custom_heading ">
-            <h2 class="responsive-h5">Subjects</h2>
+            <h2 class="responsive-h5 wow fadeIn">Subjects</h2>
           </div>
         </div>
         < div className = "row" >
           <div className="section_custom_heading">
-            <h2 className="subject-title-description">
+            <h2 className="subject-title-description wow fadeInUp">
               Here are a few of the subjects are the most popular.
             </h2>
           </div>

@@ -18,12 +18,12 @@ class Why extends Component {
                     </div> 
                 <div className="row">
                     <div class="section_custom_heading  ">
-                        <h2 class="responsive-h5 text-dark">How we are different?</h2>
+                        <h2 class="responsive-h5 text-dark wow fadeIn">How we are different?</h2>
                     </div>
                 </div>
                 <div className="row">
                     <div className="section_custom_heading">
-                        <h2 className="subject-title-description text-dark">
+                        <h2 className="subject-title-description text-dark wow animated fadeInUp">
                             Quality - Reasonable Price - Highly Trust
             </h2>
                     </div>
@@ -44,11 +44,11 @@ class Why extends Component {
                                 <div class="service-box">
                                     <div class="clearfix">
                                         <div class="iconset">
-                                            <span class="fas fa-headset icon-us"></span>
+                                            <span class="fas fa-headset icon-us wow fadeIn"></span>
                                         </div>
-                                        <div class="y-us-content">
-                                            <h3 className="titlecolor">Your own Personal<span className="partlytitlecolor">Learning Consultant</span> </h3>
-                                            <p>Your consultant is there to help you eliminate stress, like helping your child prepare for standardized tests or sending you important reminders.</p>
+                                        <div class="y-us-content ">
+                                            <h3 className="titlecolor wow flipInX">Your own Personal<span className="partlytitlecolor">Learning Consultant</span> </h3>
+                                            <p className="wow fadeIn">Your consultant is there to help you eliminate stress, like helping your child prepare for standardized tests or sending you important reminders.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -64,11 +64,11 @@ class Why extends Component {
                                 <div class="service-box">
                                     <div class="clearfix">
                                         <div class="iconset">
-                                            <span class="fas fa-comments icon-us"></span>
+                                            <span class="fas fa-comments icon-us wow fadeIn"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h3 className="titlecolor"><span className="partlytitlecolor">Feedback</span> that matters</h3>
-                                            <p>We provide reports you’ll actually want to read, from session recaps and advice to quarterly high-level reports. You’ll also learn about your child’s learning style and development of non-academic skills.</p>
+                                            <h3 className="titlecolor wow flipInX"><span className="partlytitlecolor">Feedback</span> that matters</h3>
+                                            <p className="wow fadeIn">We provide reports you’ll actually want to read, from session recaps and advice to quarterly high-level reports. You’ll also learn about your child’s learning style and development of non-academic skills.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -84,11 +84,11 @@ class Why extends Component {
                                 <div class="service-box">
                                     <div class="clearfix">
                                         <div class="iconset">
-                                            <span class="fas fa-award icon-us"></span>
+                                            <span class="fas fa-award icon-us wow fadeIn"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            <h3 className="titlecolor"><span className="partlytitlecolor">Perfectly matched</span> tutors</h3>
-                                            <p>Our personalized matching process considers your child’s learning styles, learning accommodations, skill level, and much more to connect them with competent and personable</p>
+                                            <h3 className="titlecolor wow flipInX"><span className="partlytitlecolor">Perfectly matched</span> tutors</h3>
+                                            <p className="wow fadeIn">Our personalized matching process considers your child’s learning styles, learning accommodations, skill level, and much more to connect them with competent and personable</p>
                                         </div>
                                     </div>
                                 </div>
@@ -104,11 +104,11 @@ class Why extends Component {
                                 <div class="service-box">
                                     <div class="clearfix">
                                         <div class="iconset">
-                                            <span class="fas fa-heart icon-us"></span>
+                                            <span class="fas fa-heart icon-us wow fadeIn"></span>
                                         </div>
                                         <div class="y-us-content">
-                                            < h3 className="titlecolor" > We <span className="partlytitlecolor">take care </span>of your tutors</h3>
-                                            <p>Thanks to our platform,don’t have to spend time on logistics or payment, and can spend their time focusing on helping your child.</p>
+                                            < h3 className="titlecolor wow flipInX" > We <span className="partlytitlecolor">take care </span>of your tutors</h3>
+                                            <p className="wow fadeIn">Thanks to our platform,don’t have to spend time on logistics or payment, and can spend their time focusing on helping your child.</p>
                                         </div>
                                     </div>
                                 </div>

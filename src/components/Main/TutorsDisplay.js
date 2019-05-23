@@ -39,14 +39,14 @@ state={
         </div>
         <div className="row">
           <div class="section_custom_heading  ">
-            <h2 class="responsive-h5 text-dark">
+            <h2 class="responsive-h5 text-dark wow fadeIn">
               Connecting People with Private Tutors
             </h2>
           </div>
         </div>
         <div className="row">
           <div className="section_custom_heading">
-            <h2 className="subject-title-description text-dark">
+            <h2 className="subject-title-description text-dark wow animated fadeInUp ">
               A community of more than 1000 qualified tutors
             </h2>
           </div>

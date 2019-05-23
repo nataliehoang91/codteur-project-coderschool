@@ -1,3 +1,5 @@
+
+
 THREE.SpriteCanvasMaterial = function (parameters) {
 
       THREE.Material.call(this);

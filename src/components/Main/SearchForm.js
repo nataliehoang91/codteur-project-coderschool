@@ -178,7 +178,7 @@ class SearchForm extends Component {
     ];
 
     return (
-      <div class="search-bar-home horizontal">
+      <div class="search-bar-home horizontal animated flipInY delay-1s">
         <form
           name="hemispherebundle_offer_search"
           id="search-form"

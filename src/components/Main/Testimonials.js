@@ -15,7 +15,7 @@ class Testimonials extends Component {
         </div>
         <div className="row">
           <div className="section_custom_heading">
-            <h2 className="subject-title-description text-dark">
+            <h2 className="subject-title-description text-dark wow animated fadeInUp">
               Sharing from our Testimonials
             </h2>
           </div>
@@ -52,14 +52,14 @@ class Testimonials extends Component {
                     <div class="row">
                       <div class="col-md-5">
                         <img
-                          class="img-responsive"
+                          class="img-responsive wow zoomIn"
                           src="https://assets1.biggerpockets.com/uploads/social_user/user_avatar/838306/big_1541461757-avatar-justinfay.jpg"
                           alt="description of"
                         
                         />
                       </div>
                       <div class="col-md-7">
-                        <blockquote aria-label="testimonial comment">
+                        <blockquote aria-label="testimonial comment" className="wow zoomIn">
                           Lorem Ipsum is simply dummy text of the printing
                           and typesetting industry. Lorem Ipsum has been the
                           industry's standard dummy text ever since the
@@ -78,13 +78,13 @@ class Testimonials extends Component {
                     <div class="row">
                       <div class="col-md-5">
                         <img
-                          class="img-responsive"
+                          class="img-responsive wow zoomIn"
                           src="https://www.gannett-cdn.com/-mm-/1406738037af2189b628f886370bcb5a46e24595/c=0-0-1882-1415/local/-/media/USATODAY/USATODAY/2014/11/07/635509882498682692-138017387.jpg?width=534&height=401&fit=crop"
                           alt="test"
                         />
                       </div>
                       <div class="col-md-7">
-                        <blockquote aria-label="testimonial comment">
+                        <blockquote aria-label="testimonial comment" className="wow zoomIn">
                           Lorem Ipsum is simply dummy text of the printing
                           and typesetting industry. Lorem Ipsum has been the
                           industry's standard dummy text ever since the

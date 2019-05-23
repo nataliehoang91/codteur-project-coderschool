@@ -98,7 +98,7 @@ this.setState({
                                     <div class="row">
 
                                         <div class="col-lg-4">
-                                            <div class="card mb-5 mb-lg-0">
+                                            <div class="card mb-5 mb-lg-0 card-bg">
                                                 <div class="card-body">
                                                     <h1 class="card-title text-uppercase text-center">SUBSCRIPTION</h1>
                                                     <h6 class="card-price text-center">VND199,000<span class="period">/month</span></h6>
@@ -113,12 +113,12 @@ this.setState({
                                                         <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
                                                         <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
                                                     </ul>
-                                                    <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+                                                    <a href="#" class="btn btn-block btn-primary text-uppercase">CHOOSE</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div class="card mb-5 mb-lg-0">
+                                            <div class="card mb-5 mb-lg-0 card-bg">
                                                 <div class="card-body">
                                                     <h1 class="card-title text-uppercase text-center">SUBSCRIPTION</h1>
                                                     <h6 class="card-price text-center">VND1,999,000<span class="period">/YEAR</span></h6>
@@ -133,12 +133,12 @@ this.setState({
                                                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
                                                         <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
                                                     </ul>
-                                                    <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+                                                    <a href="#" class="btn btn-block btn-primary text-uppercase">CHOOSE</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div class="card">
+                                            <div class="card card-bg">
                                                 <div class="card-body">
                                                     <h1 class="card-title text-uppercase text-center">COMMISION</h1>
                                                     <h6 class="card-price text-center">VND49<span class="period">/month</span></h6>
@@ -153,7 +153,7 @@ this.setState({
                                                         <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
                                                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
                                                     </ul>
-                                                    <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+                                                    <a href="#" class="btn btn-block btn-primary text-uppercase">CHOOSE</a>
                                                 </div>
                                             </div>
                                         </div>

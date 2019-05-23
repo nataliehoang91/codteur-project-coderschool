@@ -32,7 +32,7 @@ class Steps extends Component {
           >
             <div class="how-it-works-step-content-left">
               <header class="how-it-works-step-header">
-                <h3 class="heading-3 wow FadeIn">1. Request Tutor</h3>
+                <h3 class="heading-3 wow fadeIn">1. Request Tutor</h3>
               </header>
               <div class="vc_empty_space">
                 <span class="vc_empty_space_inner" />
@@ -83,7 +83,7 @@ class Steps extends Component {
             
             <div class="how-it-works-step-content">
               <header class="how-it-works-step-header">
-                <h3 class="heading-3 wow FadeIn">2. Receive personalized matches</h3>
+                <h3 class="heading-3 wow fadeIn">2. Receive personalized matches</h3>
               </header>
               <div class="vc_empty_space">
                 <span class="vc_empty_space_inner" />

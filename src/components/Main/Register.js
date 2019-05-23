@@ -5,6 +5,7 @@ import {
     withRouter
 } from 'react-router-dom';
 import SubNav from "./SubNav";
+import Footer from "./Footer"
 
 class Register extends Component{
     state={
@@ -180,6 +181,7 @@ this.setState({
 
                             </div>
                             </ div>
+                            
                             </div>
 
 
@@ -202,7 +204,7 @@ this.setState({
             
                 
            
-                    
+                  
             
         );
     }

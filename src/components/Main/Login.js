@@ -140,7 +140,7 @@ class Login extends Component {
                 </div>
                 <div class="text-center">
                   <button
-                    class="btn login-form-button waves-effect waves-light"
+                    class="btn login-form-button waves-effect waves-light text-dark font-weight-bold"
                     onClick={this.handleSubmit}
                   >
                     LOGIN
@@ -149,7 +149,7 @@ class Login extends Component {
                     <span class="bg-light">OR</span>
                   </p>
                   <a href="/signup">
-                    <button>Sign Up</button>
+                    <button className="btn login-form-button waves-effect waves-light text-dark font-weight-bold">Sign Up</button>
                   </a>
                 </div>
               </div>

@@ -250,15 +250,15 @@ service-3 .service-box .y-us-content h4 {
 /* https://previews.123rf.com/images/arrow/arrow1507/arrow150700016/42897129-online-education-background.jpg */
 
 .bg-img {
-  /* background-image: url("https://www.tutoroo.co/bundles/hemisphere/images/header-bg.jpeg?v=92"); */
+  background-image: url("../main-bg.jpeg");
   background-size: cover;
   background-position: center center;
 
   width: 100%;
   height: 560px;
-  opacity: 1;
+  opacity: 0.8;
   visibility: inherit;
-  z-index: 20;
+  
 }
 
 .bg-overlay {
@@ -376,7 +376,7 @@ service-3 .service-box .y-us-content h4 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 99;
   width: 100%;
   transition: background-color .3s ease-in-out;
 }
@@ -1234,4 +1234,19 @@ width:6%;
 }
 .card-bg{
   background-color: antiquewhite;
+}
+.ava-url-section{
+  position: relative;
+  border:2px solid;
+  height:300px;
+  width: 450px;
+}
+.ava-url-border{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  height:300px;
+  width: 450px;
 }

@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import SubNav from "./SubNav";
 import Footer from "./Footer"
+import ImageUpload from "./ImageUpload"
 
 class Register extends Component{
     state={
@@ -51,6 +52,7 @@ this.setState({
                 
                    
                    <SubNav />
+                
                         < div className="row result-adjust-posiiton" >
                             <div className="container">
 
@@ -77,6 +79,7 @@ this.setState({
                         <div class="vc_empty_space">
                             <span class="vc_empty_space_inner" />
                         </div>
+                      
                         <div className="row">
                             <div class="section_custom_heading  ">
                                 <h2 class="responsive-step-pricing text-dark wow fadeIn">STEP 2: <span className="description-step">CHOOSE YOUR PRICING PLAN</span></h2>
@@ -181,7 +184,7 @@ this.setState({
 
                             </div>
                             </ div>
-                            
+                <ImageUpload />
                             </div>
 
 
